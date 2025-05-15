@@ -13,6 +13,7 @@ import Header from './components/Layout/Header/Header';
 import Footer from './components/Layout/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+// import FloatingTranslateButton from './components/FloatingTranslateButton/FloatingTranslateButton';
 
 // Public Pages
 import Home from './pages/Home/Home';
@@ -20,6 +21,8 @@ import Projects from './pages/Projects/Projects';
 import Experience from './pages/Experience/Experience';
 import Contact from './pages/Contact/Contact';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
+import CertificatesPage from './pages/CertificatesPage/CertificatesPage';
+import CertificateView from './pages/CertificateView/CertificateView';
 
 // Admin Pages
 import AdminLogin from './pages/Admin/AdminLogin/AdminLogin';
@@ -65,6 +68,8 @@ function App() {
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/projects/:id" element={<ProjectDetail />} />
                   <Route path="/experience" element={<Experience />} />
+                  <Route path="/certificates" element={<CertificatesPage />} />
+                  <Route path="/certificates/:id" element={<CertificateView />} />
                   <Route path="/contact" element={<Contact />} />
                   
                   {/* Admin Routes */}
@@ -131,6 +136,9 @@ function App() {
                 </Routes>
               </AnimatePresence>
               <Footer />
+              
+              {/* Add the Floating Translate Button */}
+              {/* <FloatingTranslateButton /> */}
             </div>
           </Router>
         </AuthProvider>

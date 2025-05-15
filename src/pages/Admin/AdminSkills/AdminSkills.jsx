@@ -2,18 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlus, FiEdit, FiTrash, FiSave } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import { skillsData as defaultSkillsData } from '../../../data/skillsData';
 import './AdminSkills.css';
 
 const AdminSkills = () => {
   const { t } = useTranslation();
-  const [skills, setSkills] = useState({
-    languages: [],
-    frontend: [],
-    backend: [],
-    databases: [],
-    tools: [],
-    vfx: []
-  });
+  const [skills, setSkills] = useState(defaultSkillsData);
+  // const [skills, setSkills] = useState({
+  //   languages: [],
+  //   frontend: [],
+  //   backend: [],
+  //   databases: [],
+  //   tools: [],
+  //   vfx: []
+  // });
   const [editingSkill, setEditingSkill] = useState(null);
   const [activeCategory, setActiveCategory] = useState('languages');
   const [formData, setFormData] = useState({
@@ -38,10 +40,8 @@ const AdminSkills = () => {
     if (savedSkills) {
       setSkills(JSON.parse(savedSkills));
     } else {
-      // Load default skills data if none in localStorage
-      const { skillsData } = require('../../../data/skillsData');
-      setSkills(skillsData);
-      localStorage.setItem('skills', JSON.stringify(skillsData));
+      // If no data in localStorage, use default data and save it
+      localStorage.setItem('skills', JSON.stringify(defaultSkillsData));
     }
   }, []);
   

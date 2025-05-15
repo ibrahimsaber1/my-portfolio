@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlus, FiEdit, FiTrash, FiSave, FiX } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import { experienceData as defaultExperienceData } from '../../../data/experienceData';
 import './AdminExperience.css';
 
 const AdminExperience = () => {
   const { t } = useTranslation();
-  const [experiences, setExperiences] = useState([]);
+  const [experiences, setExperiences] = useState(defaultExperienceData);
   const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
@@ -23,6 +24,8 @@ const AdminExperience = () => {
     const savedExperiences = localStorage.getItem('experiences');
     if (savedExperiences) {
       setExperiences(JSON.parse(savedExperiences));
+    }else {
+      localStorage.setItem('experiences', JSON.stringify(defaultExperienceData));
     }
   }, []);
 

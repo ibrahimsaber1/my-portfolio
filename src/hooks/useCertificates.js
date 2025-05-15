@@ -33,6 +33,10 @@ export const useCertificates = () => {
     fetchCertificates();
   }, []);
 
+  const getCertificateById = (id) => {
+    return certificates.find(cert => cert.id.toString() === id.toString());
+  };
+
   const getCertificatesByOrganization = (organization) => {
     return certificates.filter(cert => cert.organization === organization);
   };
@@ -53,6 +57,7 @@ export const useCertificates = () => {
     certificates,
     loading,
     error,
+    getCertificateById,
     getCertificatesByOrganization,
     getCertificatesBySkill,
     getRecentCertificates

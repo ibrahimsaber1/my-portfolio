@@ -38,6 +38,7 @@ const Header = () => {
     { path: '/', label: t('nav.home') },
     { path: '/projects', label: t('nav.projects') },
     { path: '/experience', label: t('nav.experience') },
+    { path: '/certificates', label: t('nav.certificates') },
     { path: '/contact', label: t('nav.contact') },
   ];
 

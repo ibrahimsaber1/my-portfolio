@@ -44,11 +44,18 @@ const AdminDashboard = () => {
       color: 'success'
     },
     {
+      title: t('admin.dashboard.sections.certificates'),
+      description: 'Manage certificates and achievements',
+      icon: FiAward,
+      path: '/admin/certificates',
+      color: 'warning'
+    },
+    {
       title: t('admin.dashboard.sections.contact'),
       description: 'View contact messages',
       icon: FiMessageSquare,
       path: '/admin/contact',
-      color: 'warning'
+      color: 'info'
     }
   ];
 

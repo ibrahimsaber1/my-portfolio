@@ -4,6 +4,7 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
+    "certificates":"certificates",
     "admin": "Admin"
   },
   "hero": {
@@ -85,10 +86,14 @@
     "viewCertificate": "View Certificate",
     "filterBy": "Filter by Organization",
     "allOrganizations": "All Organizations",
-    "skills": "Skills",
     "issueDate": "Issue Date",
     "organization": "Organization",
-    "credentialId": "Credential ID"
+    "credentialId": "Credential ID",
+    "backTo": "Back to Certificates",
+    "download": "Download Certificate",
+    "notFound": "Certificate not found",
+    "unsupportedFormat": "Unsupported file format or certificate not available",
+    "checkAdmin": "Please check the admin panel to update the certificate image."
   },
   "contact": {
     "title": "Get In Touch",
