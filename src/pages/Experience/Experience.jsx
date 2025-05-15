@@ -171,8 +171,9 @@ const Experience = () => {
             ))}
           </div>
         </section>
+              <Certificates />
       </div>
-      <Certificates />
+
     </motion.div>
   );
 };

@@ -1,0 +1,203 @@
+.admin-projects {
+    min-height: 100vh;
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--bg-secondary);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+}
+
+/* Form Styles */
+.project-form {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.project-item {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all var(--transition-fast);
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-category {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.tech-tag {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+.tech-tag.more {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.project-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-icon {
+    background-color: var(--bg-secondary);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--text-primary);
+}
+
+.btn-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-icon.delete:hover {
+    background-color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-item {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}

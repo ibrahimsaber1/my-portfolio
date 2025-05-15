@@ -327,3 +327,150 @@
       display: none;
     }
   }
+
+
+/* RTL Support Additions to global.css */
+
+/* Base RTL adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .container {
+  direction: rtl;
+}
+
+/* Header RTL */
+[dir="rtl"] .nav {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-content {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-cta {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .social-links {
+  flex-direction: row-reverse;
+}
+
+/* Cards and Lists RTL */
+[dir="rtl"] .project-card,
+[dir="rtl"] .skill-card,
+[dir="rtl"] .certificate-card,
+[dir="rtl"] .education-card,
+[dir="rtl"] .experience-item {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .project-footer,
+[dir="rtl"] .certificate-header,
+[dir="rtl"] .experience-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .project-links,
+[dir="rtl"] .certificate-actions,
+[dir="rtl"] .experience-actions {
+  flex-direction: row-reverse;
+}
+
+/* Timeline RTL */
+[dir="rtl"] .timeline {
+  padding-right: var(--spacing-2xl);
+  padding-left: 0;
+}
+
+[dir="rtl"] .timeline::before {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] .timeline-marker {
+  right: calc(-1 * var(--spacing-2xl) - 10px);
+  left: auto;
+}
+
+[dir="rtl"] .timeline-description li::before {
+  right: -1rem;
+  left: auto;
+}
+
+/* Form RTL */
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-textarea,
+[dir="rtl"] .form-select {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .form-label {
+  text-align: right;
+}
+
+/* Admin Panel RTL */
+[dir="rtl"] .dashboard-card {
+  direction: rtl;
+}
+
+[dir="rtl"] .dashboard-card .card-arrow {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .dashboard-card:hover .card-arrow {
+  transform: rotate(180deg) translateX(-5px);
+}
+
+/* Footer RTL */
+[dir="rtl"] .footer-content {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-links a {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-item {
+  flex-direction: row-reverse;
+}
+
+/* Skills Grid RTL */
+[dir="rtl"] .skill-icon {
+  margin-left: var(--spacing-sm);
+  margin-right: 0;
+}
+
+/* Certificates RTL */
+[dir="rtl"] .org-filter {
+  flex-direction: row-reverse;
+}
+
+/* Contact Form RTL */
+[dir="rtl"] .contact-content {
+  direction: rtl;
+}
+
+/* Project Detail RTL */
+[dir="rtl"] .back-button {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .back-button:hover {
+  transform: translateX(5px);
+}
+
+/* Fix icons spacing in RTL */
+[dir="rtl"] svg + span,
+[dir="rtl"] span + svg {
+  margin-left: 0;
+  margin-right: var(--spacing-xs);
+}

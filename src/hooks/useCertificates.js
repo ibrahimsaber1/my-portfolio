@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { certificatesData, getCertificatesByOrganization, getCertificatesBySkill, getRecentCertificates } from '../data/certificatesData';
+import { certificatesData as defaultCertificatesData } from '../data/certificatesData';
 
 export const useCertificates = () => {
   const [certificates, setCertificates] = useState([]);
@@ -19,7 +19,9 @@ export const useCertificates = () => {
         if (savedCertificates) {
           setCertificates(JSON.parse(savedCertificates));
         } else {
-          setCertificates(certificatesData);
+          // Initialize with default data if nothing in localStorage
+          setCertificates(defaultCertificatesData);
+          localStorage.setItem('certificates', JSON.stringify(defaultCertificatesData));
         }
       } catch (err) {
         setError(err.message);
@@ -30,6 +32,22 @@ export const useCertificates = () => {
 
     fetchCertificates();
   }, []);
+
+  const getCertificatesByOrganization = (organization) => {
+    return certificates.filter(cert => cert.organization === organization);
+  };
+
+  const getCertificatesBySkill = (skill) => {
+    return certificates.filter(cert => 
+      cert.skills.some(s => s.toLowerCase().includes(skill.toLowerCase()))
+    );
+  };
+
+  const getRecentCertificates = (limit = 5) => {
+    return [...certificates]
+      .sort((a, b) => new Date(b.issueDate) - new Date(a.issueDate))
+      .slice(0, limit);
+  };
 
   return {
     certificates,

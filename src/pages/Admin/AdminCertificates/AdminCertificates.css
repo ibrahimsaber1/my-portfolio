@@ -215,3 +215,20 @@
       width: 100%;
     }
   }
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .form-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }

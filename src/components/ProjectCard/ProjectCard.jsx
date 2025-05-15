@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiUsers } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiUsers, FiFolder } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './ProjectCard.css';
 
 const ProjectCard = ({ project }) => {
+  const [imageError, setImageError] = useState(false);
+  const { t } = useTranslation();
+  
   const {
     id,
     title,
@@ -18,6 +22,10 @@ const ProjectCard = ({ project }) => {
     teamSize
   } = project;
 
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <motion.div
       className="project-card"
@@ -29,15 +37,20 @@ const ProjectCard = ({ project }) => {
     >
       <Link to={`/projects/${id}`} className="project-card-link">
         <div className="project-image">
-          <img 
-            src={image} 
-            alt={title}
-            onError={(e) => {
-              e.target.src = `https://via.placeholder.com/400x300?text=${title}`;
-            }}
-          />
+          {imageError ? (
+            <div className="project-placeholder">
+              <FiFolder size={60} />
+              <span>{title}</span>
+            </div>
+          ) : (
+            <img 
+              src={image} 
+              alt={title}
+              onError={handleImageError}
+            />
+          )}
           <div className="project-overlay">
-            <span className="project-category">{category}</span>
+            <span className="project-category">{t(`projects.categories.${category}`) || category}</span>
           </div>
         </div>
 
@@ -61,7 +74,7 @@ const ProjectCard = ({ project }) => {
               {team && (
                 <span className="team-indicator">
                   <FiUsers />
-                  Team of {teamSize}
+                  {t('projects.teamOf')} {teamSize}
                 </span>
               )}
             </div>
@@ -74,7 +87,7 @@ const ProjectCard = ({ project }) => {
                   rel="noopener noreferrer"
                   className="project-link"
                   onClick={(e) => e.stopPropagation()}
-                  aria-label="View on GitHub"
+                  aria-label={t('projects.details.sourceCode')}
                 >
                   <FiGithub />
                 </a>
@@ -86,7 +99,7 @@ const ProjectCard = ({ project }) => {
                   rel="noopener noreferrer"
                   className="project-link"
                   onClick={(e) => e.stopPropagation()}
-                  aria-label="View live demo"
+                  aria-label={t('projects.details.liveDemo')}
                 >
                   <FiExternalLink />
                 </a>

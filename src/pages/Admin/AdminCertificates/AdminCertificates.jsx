@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiPlus, FiEdit, FiTrash, FiSave, FiUpload } from 'react-icons/fi';
+import { FiPlus, FiEdit, FiTrash, FiSave, FiUpload, FiX } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import './AdminCertificates.css';
 
@@ -18,11 +18,16 @@ const AdminCertificates = () => {
   });
   const [imageFile, setImageFile] = useState(null);
 
-  // Load certificates from localStorage or API
+  // Load certificates from localStorage
   useEffect(() => {
     const savedCertificates = localStorage.getItem('certificates');
     if (savedCertificates) {
       setCertificates(JSON.parse(savedCertificates));
+    } else {
+      // Load default certificatesData if none in localStorage
+      const { certificatesData } = require('../../../data/certificatesData');
+      setCertificates(certificatesData);
+      localStorage.setItem('certificates', JSON.stringify(certificatesData));
     }
   }, []);
 
@@ -44,22 +49,19 @@ const AdminCertificates = () => {
 
     const certificateData = {
       ...formData,
-      image: imageUrl
+      image: imageUrl,
+      id: editingId === 'new' ? Date.now() : editingId
     };
 
-    if (editingId) {
+    if (editingId === 'new') {
+      // Add new certificate
+      saveCertificates([certificateData, ...certificates]);
+    } else {
       // Update existing certificate
       const updatedCertificates = certificates.map(cert =>
-        cert.id === editingId ? { ...certificateData, id: editingId } : cert
+        cert.id === editingId ? certificateData : cert
       );
       saveCertificates(updatedCertificates);
-    } else {
-      // Add new certificate
-      const newCertificate = {
-        ...certificateData,
-        id: Date.now()
-      };
-      saveCertificates([newCertificate, ...certificates]);
     }
     resetForm();
   };
@@ -131,6 +133,15 @@ const AdminCertificates = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
           >
+            <div className="form-header">
+              <h2>{editingId === 'new' ? 'Add New Certificate' : 'Edit Certificate'}</h2>
+              <button 
+                className="btn-icon"
+                onClick={resetForm}
+              >
+                <FiX />
+              </button>
+            </div>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>Certificate Title</label>

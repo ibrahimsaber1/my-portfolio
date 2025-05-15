@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiCalendar, FiAward } from 'react-icons/fi';
+import { FiExternalLink, FiCalendar, FiAward, FiFile } from 'react-icons/fi';
 import { certificatesData } from '../../data/certificatesData';
+import { useTranslation } from 'react-i18next';
 import './Certificates.css';
 
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [imageErrors, setImageErrors] = useState({});
+  const { t } = useTranslation();
 
   // Get unique organizations
   const organizations = ['all', ...new Set(certificatesData.map(cert => cert.organization))];
@@ -14,11 +17,42 @@ const Certificates = () => {
     ? certificatesData 
     : certificatesData.filter(cert => cert.organization === selectedCategory);
 
+  const handleImageError = (certificateId) => {
+    setImageErrors(prev => ({
+      ...prev,
+      [certificateId]: true
+    }));
+  };
+
+  const renderCertificateLink = (certificate) => {
+    if (imageErrors[certificate.id]) {
+      return (
+        <div className="certificate-placeholder">
+          <FiFile size={40} />
+          <p>{t('certificates.viewCertificate')}</p>
+        </div>
+      );
+    }
+
+    return (
+      <a 
+        href={certificate.image} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="view-certificate"
+        onError={() => handleImageError(certificate.id)}
+      >
+        <FiExternalLink />
+        {t('certificates.viewCertificate')}
+      </a>
+    );
+  };
+
   return (
     <div className="certificates-section">
       <h2 className="section-title">
         <FiAward />
-        Certificates & Achievements
+        {t('certificates.title')}
       </h2>
 
       {/* Filter by Organization */}
@@ -29,7 +63,7 @@ const Certificates = () => {
             className={`filter-btn ${selectedCategory === org ? 'active' : ''}`}
             onClick={() => setSelectedCategory(org)}
           >
-            {org === 'all' ? 'All Organizations' : org}
+            {org === 'all' ? t('certificates.allOrganizations') : org}
           </button>
         ))}
       </div>
@@ -63,15 +97,7 @@ const Certificates = () => {
             </div>
             
             <div className="certificate-actions">
-              <a 
-                href={certificate.image} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="view-certificate"
-              >
-                <FiExternalLink />
-                View Certificate
-              </a>
+              {renderCertificateLink(certificate)}
             </div>
           </motion.div>
         ))}
