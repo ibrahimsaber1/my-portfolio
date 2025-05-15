@@ -37,9 +37,14 @@ const AdminSkills = () => {
     const savedSkills = localStorage.getItem('skills');
     if (savedSkills) {
       setSkills(JSON.parse(savedSkills));
+    } else {
+      // Load default skills data if none in localStorage
+      const { skillsData } = require('../../../data/skillsData');
+      setSkills(skillsData);
+      localStorage.setItem('skills', JSON.stringify(skillsData));
     }
   }, []);
-
+  
   // Save skills to localStorage
   const saveSkills = (updatedSkills) => {
     localStorage.setItem('skills', JSON.stringify(updatedSkills));

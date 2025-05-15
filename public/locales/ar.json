@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "projects": "المشاريع",
+    "experience": "الخبرة",
+    "contact": "اتصل بنا",
+    "admin": "الإدارة"
+  },
+  "hero": {
+    "greeting": "مرحباً، أنا",
+    "name": "إبراهيم صابر",
+    "title": "مهندس برمجيات ومحب لعلوم البيانات",
+    "subtitle": "متخصص في تطوير خطوط أنابيب VFX والتطبيقات الكاملة",
+    "cta": {
+      "projects": "عرض المشاريع",
+      "contact": "تواصل معي",
+      "cv": "تحميل السيرة الذاتية"
+    }
+  },
+  "about": {
+    "title": "عني",
+    "description": "مهندس برمجيات شغوف بخبرة في Django و React و FastAPI وتقنيات الويب الحديثة. أستكشف حالياً علوم البيانات بينما أقوم ببناء أدوات خط أنابيب VFX وتطبيقات كاملة.",
+    "stats": {
+      "yearsExperience": "سنوات الخبرة",
+      "projectsCompleted": "المشاريع المنجزة",
+      "technologies": "التقنيات",
+      "certifications": "الشهادات"
+    }
+  },
+  "skills": {
+    "title": "المهارات والتقنيات",
+    "categories": {
+      "languages": "لغات البرمجة",
+      "frontend": "تطوير الواجهة الأمامية",
+      "backend": "تطوير الواجهة الخلفية",
+      "databases": "قواعد البيانات",
+      "tools": "الأدوات و DevOps",
+      "vfx": "VFX وخط الأنابيب"
+    }
+  },
+  "projects": {
+    "title": "المشاريع المميزة",
+    "viewAll": "عرض جميع المشاريع",
+    "categories": {
+      "all": "الكل",
+      "fullstack": "مكدس كامل",
+      "dataScience": "علوم البيانات",
+      "vfx": "خط أنابيب VFX",
+      "python": "Python",
+      "javascript": "JavaScript"
+    },
+    "details": {
+      "technologies": "التقنيات المستخدمة",
+      "description": "الوصف",
+      "liveDemo": "عرض مباشر",
+      "sourceCode": "الكود المصدري",
+      "readMore": "اقرأ المزيد",
+      "backToProjects": "العودة للمشاريع",
+      "relatedProjects": "مشاريع ذات صلة",
+      "keyFeatures": "الميزات الرئيسية",
+      "aboutProject": "حول هذا المشروع"
+    },
+    "teamOf": "فريق من"
+  },
+  "experience": {
+    "title": "الخبرة المهنية",
+    "present": "الحالي",
+    "responsibilities": "المسؤوليات الرئيسية",
+    "workExperience": "الخبرة المهنية",
+    "education": "التعليم",
+    "duration": "المدة",
+    "location": "الموقع",
+    "current": "حالي"
+  },
+  "education": {
+    "title": "التعليم",
+    "degree": "الدرجة",
+    "field": "مجال الدراسة",
+    "institution": "المؤسسة",
+    "duration": "المدة"
+  },
+  "certificates": {
+    "title": "الشهادات والإنجازات",
+    "viewAll": "عرض جميع الشهادات",
+    "viewCertificate": "عرض الشهادة",
+    "filterBy": "تصفية حسب المنظمة",
+    "allOrganizations": "جميع المنظمات",
+    "skills": "المهارات",
+    "issueDate": "تاريخ الإصدار",
+    "organization": "المنظمة",
+    "credentialId": "معرف الاعتماد"
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "subtitle": "لا تتردد في التواصل للتعاون أو مجرد ترحيب ودي",
+    "form": {
+      "name": "اسمك",
+      "email": "بريدك الإلكتروني",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "send": "إرسال الرسالة",
+      "sending": "جاري الإرسال...",
+      "success": "تم إرسال الرسالة بنجاح!",
+      "error": "خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى."
+    },
+    "info": {
+      "title": "ابقى على تواصل",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "location": "الموقع",
+      "linkedin": "لينكد إن",
+      "github": "جيت هاب",
+      "connectWithMe": "تواصل معي"
+    }
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة",
+    "madeWith": "صنع بـ ❤️ بواسطة إبراهيم صابر",
+    "quickLinks": "روابط سريعة",
+    "contactInfo": "معلومات الاتصال",
+    "resources": "الموارد",
+    "downloadCV": "تحميل السيرة الذاتية",
+    "adminPanel": "لوحة الإدارة"
+  },
+  "admin": {
+    "login": {
+      "title": "تسجيل دخول المسؤول",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "button": "تسجيل الدخول",
+      "error": "بيانات الاعتماد غير صحيحة",
+      "credentials": "بيانات اعتماد المسؤول:"
+    },
+    "dashboard": {
+      "title": "لوحة التحكم",
+      "welcome": "مرحباً بعودتك",
+      "logout": "تسجيل الخروج",
+      "totalProjects": "إجمالي المشاريع",
+      "messages": "الرسائل",
+      "visitors": "الزوار",
+      "pageViews": "مشاهدات الصفحة",
+      "viewSite": "عرض الموقع",
+      "analytics": "التحليلات",
+      "sections": {
+        "projects": "إدارة المشاريع",
+        "experience": "إدارة الخبرة",
+        "education": "إدارة التعليم",
+        "skills": "إدارة المهارات",
+        "certificates": "إدارة الشهادات",
+        "contact": "رسائل الاتصال"
+      },
+      "descriptions": {
+        "projects": "إدارة محفظة مشاريعك",
+        "experience": "تحديث الخبرة المهنية",
+        "education": "إدارة تفاصيل التعليم",
+        "skills": "تحديث المهارات والتقنيات",
+        "certificates": "إدارة الشهادات والإنجازات",
+        "contact": "عرض رسائل الاتصال"
+      }
+    }
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "add": "إضافة",
+    "update": "تحديث",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "yes": "نعم",
+    "no": "لا",
+    "confirmDelete": "هل أنت متأكد من رغبتك في حذف هذا؟"
+  }
+}
