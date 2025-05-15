@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "首页",
+    "projects": "项目",
+    "experience": "经历",
+    "contact": "联系",
+    "admin": "管理"
+  },
+  "hero": {
+    "greeting": "你好，我是",
+    "name": "Ibrahim Saber",
+    "title": "软件工程师和数据科学爱好者",
+    "subtitle": "专门从事VFX管道开发和全栈应用程序",
+    "cta": {
+      "projects": "查看项目",
+      "contact": "联系我",
+      "cv": "下载简历"
+    }
+  },
+  "about": {
+    "title": "关于我",
+    "description": "热情的软件工程师，精通Django、React、FastAPI和现代Web技术。目前正在探索数据科学，同时构建VFX管道工具和全栈应用程序。",
+    "stats": {
+      "yearsExperience": "年经验",
+      "projectsCompleted": "已完成项目",
+      "technologies": "技术栈",
+      "certifications": "认证"
+    }
+  },
+  "skills": {
+    "title": "技能与技术",
+    "categories": {
+      "languages": "编程语言",
+      "frontend": "前端开发",
+      "backend": "后端开发",
+      "databases": "数据库",
+      "tools": "工具和DevOps",
+      "vfx": "VFX和管道"
+    }
+  },
+  "projects": {
+    "title": "精选项目",
+    "viewAll": "查看所有项目",
+    "categories": {
+      "all": "全部",
+      "fullstack": "全栈",
+      "dataScience": "数据科学",
+      "vfx": "VFX管道",
+      "python": "Python",
+      "javascript": "JavaScript"
+    },
+    "details": {
+      "technologies": "使用的技术",
+      "description": "描述",
+      "liveDemo": "在线演示",
+      "sourceCode": "源代码",
+      "readMore": "阅读更多",
+      "backToProjects": "返回项目",
+      "relatedProjects": "相关项目",
+      "keyFeatures": "主要特点",
+      "aboutProject": "关于此项目"
+    },
+    "teamOf": "团队规模"
+  },
+  "experience": {
+    "title": "工作经历",
+    "present": "至今",
+    "responsibilities": "主要职责",
+    "workExperience": "工作经历",
+    "education": "教育",
+    "duration": "时长",
+    "location": "地点",
+    "current": "当前"
+  },
+  "education": {
+    "title": "教育背景",
+    "degree": "学位",
+    "field": "研究领域",
+    "institution": "机构",
+    "duration": "时长"
+  },
+  "certificates": {
+    "title": "证书与成就",
+    "viewAll": "查看所有证书",
+    "viewCertificate": "查看证书",
+    "filterBy": "按组织筛选",
+    "allOrganizations": "所有组织",
+    "skills": "技能",
+    "issueDate": "发布日期",
+    "organization": "组织",
+    "credentialId": "凭证ID"
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "欢迎联系我进行合作或只是打个招呼",
+    "form": {
+      "name": "您的姓名",
+      "email": "您的邮箱",
+      "subject": "主题",
+      "message": "消息",
+      "send": "发送消息",
+      "sending": "发送中...",
+      "success": "消息发送成功！",
+      "error": "发送消息时出错。请重试。"
+    },
+    "info": {
+      "title": "联系方式",
+      "email": "邮箱",
+      "phone": "电话",
+      "location": "位置",
+      "linkedin": "领英",
+      "github": "GitHub",
+      "connectWithMe": "与我联系"
+    }
+  },
+  "footer": {
+    "rights": "版权所有",
+    "madeWith": "由Ibrahim Saber用❤️制作",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系信息",
+    "resources": "资源",
+    "downloadCV": "下载简历",
+    "adminPanel": "管理面板"
+  },
+  "admin": {
+    "login": {
+      "title": "管理员登录",
+      "email": "邮箱",
+      "password": "密码",
+      "button": "登录",
+      "error": "凭证无效",
+      "credentials": "管理员凭证："
+    },
+    "dashboard": {
+      "title": "管理面板",
+      "welcome": "欢迎回来",
+      "logout": "注销",
+      "totalProjects": "项目总数",
+      "messages": "消息",
+      "visitors": "访客",
+      "pageViews": "页面浏览量",
+      "viewSite": "查看网站",
+      "analytics": "分析",
+      "sections": {
+        "projects": "管理项目",
+        "experience": "管理经历",
+        "education": "管理教育",
+        "skills": "管理技能",
+        "certificates": "管理证书",
+        "contact": "联系消息"
+      },
+      "descriptions": {
+        "projects": "管理您的项目组合",
+        "experience": "更新工作经历",
+        "education": "管理教育详情",
+        "skills": "更新技能和技术",
+        "certificates": "管理证书和成就",
+        "contact": "查看联系消息"
+      }
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "save": "保存",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "add": "添加",
+    "update": "更新",
+    "back": "返回",
+    "next": "下一个",
+    "previous": "上一个",
+    "yes": "是",
+    "no": "否",
+    "confirmDelete": "您确定要删除吗？"
+  }
+}

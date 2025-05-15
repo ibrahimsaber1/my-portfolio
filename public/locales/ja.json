@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "experience": "経験",
+    "contact": "お問い合わせ",
+    "admin": "管理"
+  },
+  "hero": {
+    "greeting": "こんにちは、私は",
+    "name": "Ibrahim Saber",
+    "title": "ソフトウェアエンジニア＆データサイエンス愛好家",
+    "subtitle": "VFXパイプライン開発とフルスタックアプリケーションを専門としています",
+    "cta": {
+      "projects": "プロジェクトを見る",
+      "contact": "お問い合わせ",
+      "cv": "履歴書をダウンロード"
+    }
+  },
+  "about": {
+    "title": "私について",
+    "description": "Django、React、FastAPI、最新のWeb技術に精通した情熱的なソフトウェアエンジニア。現在、VFXパイプラインツールとフルスタックアプリケーションを構築しながら、データサイエンスを探求しています。",
+    "stats": {
+      "yearsExperience": "年の経験",
+      "projectsCompleted": "完了したプロジェクト",
+      "technologies": "技術",
+      "certifications": "認定"
+    }
+  },
+  "skills": {
+    "title": "スキルと技術",
+    "categories": {
+      "languages": "プログラミング言語",
+      "frontend": "フロントエンド開発",
+      "backend": "バックエンド開発",
+      "databases": "データベース",
+      "tools": "ツールとDevOps",
+      "vfx": "VFXとパイプライン"
+    }
+  },
+  "projects": {
+    "title": "注目のプロジェクト",
+    "viewAll": "すべてのプロジェクトを見る",
+    "categories": {
+      "all": "すべて",
+      "fullstack": "フルスタック",
+      "dataScience": "データサイエンス",
+      "vfx": "VFXパイプライン",
+      "python": "Python",
+      "javascript": "JavaScript"
+    },
+    "details": {
+      "technologies": "使用技術",
+      "description": "説明",
+      "liveDemo": "ライブデモ",
+      "sourceCode": "ソースコード",
+      "readMore": "続きを読む",
+      "backToProjects": "プロジェクトに戻る",
+      "relatedProjects": "関連プロジェクト",
+      "keyFeatures": "主な機能",
+      "aboutProject": "このプロジェクトについて"
+    },
+    "teamOf": "チーム規模"
+  },
+  "experience": {
+    "title": "職歴",
+    "present": "現在",
+    "responsibilities": "主な責任",
+    "workExperience": "職歴",
+    "education": "教育",
+    "duration": "期間",
+    "location": "場所",
+    "current": "現在"
+  },
+  "education": {
+    "title": "学歴",
+    "degree": "学位",
+    "field": "研究分野",
+    "institution": "教育機関",
+    "duration": "期間"
+  },
+  "certificates": {
+    "title": "認定と達成",
+    "viewAll": "すべての認定を見る",
+    "viewCertificate": "認定を見る",
+    "filterBy": "組織でフィルター",
+    "allOrganizations": "すべての組織",
+    "skills": "スキル",
+    "issueDate": "発行日",
+    "organization": "組織",
+    "credentialId": "資格ID"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "コラボレーションやただのご挨拶でもお気軽にご連絡ください",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "send": "メッセージを送信",
+      "sending": "送信中...",
+      "success": "メッセージが正常に送信されました！",
+      "error": "メッセージの送信中にエラーが発生しました。もう一度お試しください。"
+    },
+    "info": {
+      "title": "連絡先",
+      "email": "メール",
+      "phone": "電話",
+      "location": "所在地",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "connectWithMe": "つながる"
+    }
+  },
+  "footer": {
+    "rights": "無断転載禁止",
+    "madeWith": "Ibrahim Saberが❤️で作成",
+    "quickLinks": "クイックリンク",
+    "contactInfo": "連絡先情報",
+    "resources": "リソース",
+    "downloadCV": "履歴書をダウンロード",
+    "adminPanel": "管理パネル"
+  },
+  "admin": {
+    "login": {
+      "title": "管理者ログイン",
+      "email": "メール",
+      "password": "パスワード",
+      "button": "ログイン",
+      "error": "無効な認証情報",
+      "credentials": "管理者認証情報："
+    },
+    "dashboard": {
+      "title": "管理ダッシュボード",
+      "welcome": "おかえりなさい",
+      "logout": "ログアウト",
+      "totalProjects": "プロジェクト総数",
+      "messages": "メッセージ",
+      "visitors": "訪問者",
+      "pageViews": "ページビュー",
+      "viewSite": "サイトを見る",
+      "analytics": "分析",
+      "sections": {
+        "projects": "プロジェクト管理",
+        "experience": "経験管理",
+        "education": "教育管理",
+        "skills": "スキル管理",
+        "certificates": "認定管理",
+        "contact": "連絡メッセージ"
+      },
+      "descriptions": {
+        "projects": "プロジェクトポートフォリオを管理",
+        "experience": "職歴を更新",
+        "education": "教育の詳細を管理",
+        "skills": "スキルと技術を更新",
+        "certificates": "認定と実績を管理",
+        "contact": "連絡メッセージを表示"
+      }
+    }
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "edit": "編集",
+    "delete": "削除",
+    "add": "追加",
+    "update": "更新",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "yes": "はい",
+    "no": "いいえ",
+    "confirmDelete": "本当に削除しますか？"
+  }
+}

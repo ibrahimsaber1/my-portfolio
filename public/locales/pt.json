@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato",
+    "admin": "Admin"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Ibrahim Saber",
+    "title": "Engenheiro de Software & Entusiasta de Ciência de Dados",
+    "subtitle": "Especializado em Desenvolvimento de Pipeline VFX e Aplicações Full-Stack",
+    "cta": {
+      "projects": "Ver Projetos",
+      "contact": "Entre em Contato",
+      "cv": "Baixar CV"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Engenheiro de software apaixonado com experiência em Django, React, FastAPI e tecnologias web modernas. Atualmente explorando ciência de dados enquanto construo ferramentas de pipeline VFX e aplicações full-stack.",
+    "stats": {
+      "yearsExperience": "Anos de Experiência",
+      "projectsCompleted": "Projetos Concluídos",
+      "technologies": "Tecnologias",
+      "certifications": "Certificações"
+    }
+  },
+  "skills": {
+    "title": "Habilidades e Tecnologias",
+    "categories": {
+      "languages": "Linguagens de Programação",
+      "frontend": "Desenvolvimento Frontend",
+      "backend": "Desenvolvimento Backend",
+      "databases": "Bancos de Dados",
+      "tools": "Ferramentas e DevOps",
+      "vfx": "VFX e Pipeline"
+    }
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "viewAll": "Ver Todos os Projetos",
+    "categories": {
+      "all": "Todos",
+      "fullstack": "Full Stack",
+      "dataScience": "Ciência de Dados",
+      "vfx": "Pipeline VFX",
+      "python": "Python",
+      "javascript": "JavaScript"
+    },
+    "details": {
+      "technologies": "Tecnologias Utilizadas",
+      "description": "Descrição",
+      "liveDemo": "Demo ao Vivo",
+      "sourceCode": "Código Fonte",
+      "readMore": "Leia Mais",
+      "backToProjects": "Voltar aos Projetos",
+      "relatedProjects": "Projetos Relacionados",
+      "keyFeatures": "Recursos Principais",
+      "aboutProject": "Sobre este projeto"
+    },
+    "teamOf": "Equipe de"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "present": "Presente",
+    "responsibilities": "Responsabilidades Principais",
+    "workExperience": "Experiência Profissional",
+    "education": "Educação",
+    "duration": "Duração",
+    "location": "Localização",
+    "current": "Atual"
+  },
+  "education": {
+    "title": "Educação",
+    "degree": "Grau",
+    "field": "Campo de Estudo",
+    "institution": "Instituição",
+    "duration": "Duração"
+  },
+  "certificates": {
+    "title": "Certificados e Conquistas",
+    "viewAll": "Ver Todos os Certificados",
+    "viewCertificate": "Ver Certificado",
+    "filterBy": "Filtrar por Organização",
+    "allOrganizations": "Todas as Organizações",
+    "skills": "Habilidades",
+    "issueDate": "Data de Emissão",
+    "organization": "Organização",
+    "credentialId": "ID da Credencial"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Fique à vontade para entrar em contato para colaborações ou apenas para dizer oi",
+    "form": {
+      "name": "Seu Nome",
+      "email": "Seu Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+    },
+    "info": {
+      "title": "Entre em contato",
+      "email": "Email",
+      "phone": "Telefone",
+      "location": "Localização",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "connectWithMe": "Conecte-se comigo"
+    }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "madeWith": "Feito com ❤️ por Ibrahim Saber",
+    "quickLinks": "Links Rápidos",
+    "contactInfo": "Informações de Contato",
+    "resources": "Recursos",
+    "downloadCV": "Baixar CV",
+    "adminPanel": "Painel Admin"
+  },
+  "admin": {
+    "login": {
+      "title": "Login Admin",
+      "email": "Email",
+      "password": "Senha",
+      "button": "Entrar",
+      "error": "Credenciais inválidas",
+      "credentials": "Credenciais do administrador:"
+    },
+    "dashboard": {
+      "title": "Painel Admin",
+      "welcome": "Bem-vindo de volta",
+      "logout": "Sair",
+      "totalProjects": "Total de Projetos",
+      "messages": "Mensagens",
+      "visitors": "Visitantes",
+      "pageViews": "Visualizações de Página",
+      "viewSite": "Ver Site",
+      "analytics": "Análises",
+      "sections": {
+        "projects": "Gerenciar Projetos",
+        "experience": "Gerenciar Experiência",
+        "education": "Gerenciar Educação",
+        "skills": "Gerenciar Habilidades",
+        "certificates": "Gerenciar Certificados",
+        "contact": "Mensagens de Contato"
+      },
+      "descriptions": {
+        "projects": "Gerencie seu portfólio de projetos",
+        "experience": "Atualizar experiência profissional",
+        "education": "Gerenciar detalhes de educação",
+        "skills": "Atualizar habilidades e tecnologias",
+        "certificates": "Gerenciar certificados e conquistas",
+        "contact": "Ver mensagens de contato"
+      }
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "add": "Adicionar",
+    "update": "Atualizar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "yes": "Sim",
+    "no": "Não",
+    "confirmDelete": "Tem certeza de que deseja excluir isso?"
+  }
+}

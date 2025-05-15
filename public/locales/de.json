@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "projects": "Projekte",
+    "experience": "Erfahrung",
+    "contact": "Kontakt",
+    "admin": "Admin"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "Ibrahim Saber",
+    "title": "Software-Ingenieur & Data Science Enthusiast",
+    "subtitle": "Spezialisiert auf VFX-Pipeline-Entwicklung & Full-Stack-Anwendungen",
+    "cta": {
+      "projects": "Projekte ansehen",
+      "contact": "Kontaktieren",
+      "cv": "Lebenslauf herunterladen"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "description": "Leidenschaftlicher Software-Ingenieur mit Expertise in Django, React, FastAPI und modernen Webtechnologien. Erkunde derzeit Data Science, während ich VFX-Pipeline-Tools und Full-Stack-Anwendungen entwickle.",
+    "stats": {
+      "yearsExperience": "Jahre Erfahrung",
+      "projectsCompleted": "Abgeschlossene Projekte",
+      "technologies": "Technologien",
+      "certifications": "Zertifikate"
+    }
+  },
+  "skills": {
+    "title": "Fähigkeiten & Technologien",
+    "categories": {
+      "languages": "Programmiersprachen",
+      "frontend": "Frontend-Entwicklung",
+      "backend": "Backend-Entwicklung",
+      "databases": "Datenbanken",
+      "tools": "Tools & DevOps",
+      "vfx": "VFX & Pipeline"
+    }
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "viewAll": "Alle Projekte anzeigen",
+    "categories": {
+      "all": "Alle",
+      "fullstack": "Full Stack",
+      "dataScience": "Data Science",
+      "vfx": "VFX Pipeline",
+      "python": "Python",
+      "javascript": "JavaScript"
+    },
+    "details": {
+      "technologies": "Verwendete Technologien",
+      "description": "Beschreibung",
+      "liveDemo": "Live-Demo",
+      "sourceCode": "Quellcode",
+      "readMore": "Mehr lesen",
+      "backToProjects": "Zurück zu Projekten",
+      "relatedProjects": "Verwandte Projekte",
+      "keyFeatures": "Hauptmerkmale",
+      "aboutProject": "Über dieses Projekt"
+    },
+    "teamOf": "Team von"
+  },
+  "experience": {
+    "title": "Berufserfahrung",
+    "present": "Gegenwart",
+    "responsibilities": "Hauptverantwortlichkeiten",
+    "workExperience": "Berufserfahrung",
+    "education": "Bildung",
+    "duration": "Dauer",
+    "location": "Standort",
+    "current": "Aktuell"
+  },
+  "education": {
+    "title": "Bildung",
+    "degree": "Abschluss",
+    "field": "Studienrichtung",
+    "institution": "Institution",
+    "duration": "Dauer"
+  },
+  "certificates": {
+    "title": "Zertifikate & Erfolge",
+    "viewAll": "Alle Zertifikate anzeigen",
+    "viewCertificate": "Zertifikat anzeigen",
+    "filterBy": "Nach Organisation filtern",
+    "allOrganizations": "Alle Organisationen",
+    "skills": "Fähigkeiten",
+    "issueDate": "Ausstellungsdatum",
+    "organization": "Organisation",
+    "credentialId": "Zertifikats-ID"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Kontaktieren Sie mich gerne für Kooperationen oder einfach nur zum Grüßen",
+    "form": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "title": "In Kontakt treten",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "location": "Standort",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "connectWithMe": "Verbinde dich mit mir"
+    }
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "madeWith": "Mit ❤️ erstellt von Ibrahim Saber",
+    "quickLinks": "Schnelllinks",
+    "contactInfo": "Kontaktinformationen",
+    "resources": "Ressourcen",
+    "downloadCV": "Lebenslauf herunterladen",
+    "adminPanel": "Admin-Panel"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin-Anmeldung",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "button": "Anmelden",
+      "error": "Ungültige Anmeldedaten",
+      "credentials": "Admin-Anmeldedaten:"
+    },
+    "dashboard": {
+      "title": "Admin-Dashboard",
+      "welcome": "Willkommen zurück",
+      "logout": "Abmelden",
+      "totalProjects": "Projekte gesamt",
+      "messages": "Nachrichten",
+      "visitors": "Besucher",
+      "pageViews": "Seitenaufrufe",
+      "viewSite": "Website anzeigen",
+      "analytics": "Analysen",
+      "sections": {
+        "projects": "Projekte verwalten",
+        "experience": "Erfahrung verwalten",
+        "education": "Bildung verwalten",
+        "skills": "Fähigkeiten verwalten",
+        "certificates": "Zertifikate verwalten",
+        "contact": "Kontaktnachrichten"
+      },
+      "descriptions": {
+        "projects": "Verwalten Sie Ihr Projekt-Portfolio",
+        "experience": "Berufserfahrung aktualisieren",
+        "education": "Bildungsdetails verwalten",
+        "skills": "Fähigkeiten und Technologien aktualisieren",
+        "certificates": "Zertifikate und Erfolge verwalten",
+        "contact": "Kontaktnachrichten anzeigen"
+      }
+    }
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "add": "Hinzufügen",
+    "update": "Aktualisieren",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "yes": "Ja",
+    "no": "Nein",
+    "confirmDelete": "Sind Sie sicher, dass Sie dies löschen möchten?"
+  }
+}
