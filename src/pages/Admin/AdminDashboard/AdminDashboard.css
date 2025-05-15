@@ -1,0 +1,190 @@
+.admin-dashboard {
+    min-height: 100vh;
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--bg-secondary);
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .dashboard-header p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .stat-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--border-color);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .stat-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+  
+  .stat-content p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .dashboard-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-fast);
+  }
+  
+  .dashboard-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .dashboard-card:hover {
+    box-shadow: 0 6px 12px var(--shadow-color);
+    border-color: var(--primary-color);
+  }
+  
+  .dashboard-card.primary { --card-color: var(--primary-color); }
+  .dashboard-card.secondary { --card-color: var(--secondary-color); }
+  .dashboard-card.accent { --card-color: var(--accent-color); }
+  .dashboard-card.success { --card-color: #10b981; }
+  .dashboard-card.warning { --card-color: #f59e0b; }
+  
+  .dashboard-card .card-icon {
+    font-size: 2.5rem;
+    color: var(--card-color);
+    background-color: rgba(var(--card-color-rgb), 0.1);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+  }
+  
+  .card-content {
+    flex: 1;
+  }
+  
+  .card-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .card-content p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+  
+  .card-arrow {
+    font-size: 1.5rem;
+    color: var(--text-tertiary);
+    transition: all var(--transition-fast);
+  }
+  
+  .dashboard-card:hover .card-arrow {
+    color: var(--card-color);
+    transform: translateX(5px);
+  }
+  
+  .dashboard-footer {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .quick-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+      gap: var(--spacing-md);
+      align-items: flex-start;
+    }
+  
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .quick-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .quick-actions .btn {
+      width: 100%;
+    }
+  }
