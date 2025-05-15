@@ -8,90 +8,8 @@ package.json
 node_modules
 
 ./src:
-styles
-setupTests.js
-reportWebVitals.js
-pages
-logo.svg
-index.js
-index.css
-hooks
-data
-contexts
-components
-App.test.js
-App.js
-App.css
-
-./src/styles:
-global.css
-
-./src/pages:
-Home
-Admin
-
-./src/pages/Home:
-Home.jsx
-Home.css
-
-./src/pages/Admin:
-AdminLogin
-AdminDashboard
-
-./src/pages/Admin/AdminLogin:
-AdminLogin.jsx
-AdminLogin.css
-
-./src/pages/Admin/AdminDashboard:
-AdminDashboard.jsx
-AdminDashboard.css
-
-./src/hooks:
-useSkills.js
-useProjects.js
-
-./src/data:
-translations.js
-skillsData.js
-projectsData.js
-
-./src/contexts:
-ThemeContext.js
-LanguageContext.js
-AuthContext.js
-
-./src/components:
-SkillCard
-ScrollToTop.jsx
-ProtectedRoute.jsx
-ProjectCard
-LoadingScreen
-Layout
-
-./src/components/SkillCard:
-SkillCard.jsx
-SkillCard.css
-
-./src/components/ProjectCard:
-ProjectCard.jsx
-ProjectCard.css
-
-./src/components/LoadingScreen:
-LoadingScreen.jsx
-LoadingScreen.css
-
-./src/components/Layout:
-Header
-Footer
-
-./src/components/Layout/Header:
-Header.jsx
-Header.css
-
-./src/components/Layout/Footer:
-Footer.jsx
-Footer.css
-
+   -----
+   
 ./public:
 robots.txt
 manifest.json
@@ -109,3 +27,92 @@ cv
 
 ./public/cv:
 
+
+Dev02.User@DEV02 MINGW64 /d/FOR_TESTING/ibrahim/my-portfolio/src (main)
+$ ls -rR
+.:
+styles/  setupTests.js  reportWebVitals.js  pages/  logo.svg  index.js  index.css  hooks/  data/  contexts/  components/  App.test.js  App.js  App.css
+
+./styles:
+global.css
+
+./pages:
+Projects/  ProjectDetail/  Home/  Experience/  Contact/  Admin/
+
+./pages/Projects:
+Projects.jsx  Projects.css
+
+./pages/ProjectDetail:
+ProjectDetail.jsx  ProjectDetail.css
+
+./pages/Home:
+Home.jsx  Home.css
+
+./pages/Experience:
+Experience.jsx  Experience.css
+
+./pages/Contact:
+Contact.jsx  Contact.css
+
+./pages/Admin:
+AdminSkills/  AdminProjects/  AdminLogin/  AdminExperience/  AdminEducation/  AdminDashboard/  AdminContact/  AdminCertificates/
+
+./pages/Admin/AdminSkills:
+AdminSkills.jsx  AdminSkills.css
+
+./pages/Admin/AdminProjects:
+AdminProjects.jsx  AdminProjects.css
+
+./pages/Admin/AdminLogin:
+AdminLogin.jsx  AdminLogin.css
+
+./pages/Admin/AdminExperience:
+AdminExperience.jsx  AdminExperience.css
+
+./pages/Admin/AdminEducation:
+AdminEducation.jsx  AdminEducation.css
+
+./pages/Admin/AdminDashboard:
+AdminDashboard.jsx  AdminDashboard.css
+
+./pages/Admin/AdminContact:
+AdminContact.jsx  AdminContact.css
+
+./pages/Admin/AdminCertificates:
+AdminCertificates.jsx  AdminCertificates.css
+
+./hooks:
+useSkills.js  useProjects.js  useCertificates.js
+
+./data:
+translations.js  translations/  skillsData.js  projectsData.js  certificatesData.js
+
+./data/translations:
+translationFR.js  translationES.js  translationEN.js  translationAR.js
+
+./contexts:
+ThemeContext.js  LanguageContext.js  AuthContext.js
+
+./components:
+SkillCard/  ScrollToTop.jsx  ProtectedRoute.jsx  ProjectCard/  LoadingScreen/  Layout/  Certificates/
+
+./components/SkillCard:
+SkillCard.jsx  SkillCard.css
+
+./components/ProjectCard:
+ProjectCard.jsx  ProjectCard.css
+
+./components/LoadingScreen:
+LoadingScreen.jsx  LoadingScreen.css
+
+./components/Layout:
+Header/  Footer/
+
+./components/Layout/Header:
+Header.jsx  Header.css
+
+./components/Layout/Footer:
+Footer.jsx  Footer.css
+
+./components/Certificates:
+Certificates.jsx  Certificates.css
