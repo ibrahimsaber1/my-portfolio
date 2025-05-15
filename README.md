@@ -3,8 +3,8 @@
 A modern, multilingual portfolio website built with React, featuring an admin panel, dark mode, and comprehensive project showcase.
 
 ## 🚀 Live Demo
-
-[View Live Portfolio](https://your-portfolio-url.com)
+still under development :)
+[View Live Portfolio]()
 
 ## 📋 Table of Contents
 
