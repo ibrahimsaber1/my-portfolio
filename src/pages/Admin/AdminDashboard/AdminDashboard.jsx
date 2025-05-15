@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   FiFolder, FiBriefcase, FiBook, FiTool, 
   FiMessageSquare, FiLogOut, FiUsers,
-  FiGlobe, FiBarChart 
+  FiGlobe, FiBarChart, FiAward 
 } from 'react-icons/fi';
 import { useAuth } from '../../../contexts/AuthContext';
 import { useTranslation } from 'react-i18next';

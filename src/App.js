@@ -24,12 +24,12 @@ import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 // Admin Pages
 import AdminLogin from './pages/Admin/AdminLogin/AdminLogin';
 import AdminDashboard from './pages/Admin/AdminDashboard/AdminDashboard';
-// import AdminProjects from './pages/Admin/AdminProjects';
-// import AdminExperience from './pages/Admin/AdminExperience';
-// import AdminEducation from './pages/Admin/AdminEducation';
-// import AdminSkills from './pages/Admin/AdminSkills';
-// import AdminContact from './pages/Admin/AdminContact';
-
+import AdminProjects from './pages/Admin/AdminProjects/AdminProjects';
+import AdminExperience from './pages/Admin/AdminExperience/AdminExperience';
+import AdminEducation from './pages/Admin/AdminEducation/AdminEducation';
+import AdminSkills from './pages/Admin/AdminSkills/AdminSkills';
+import AdminContact from './pages/Admin/AdminContact/AdminContact';
+import AdminCertificates from './pages/Admin/AdminCertificates/AdminCertificates';
 // Protected Route Component
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -76,7 +76,7 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
-                  {/* <Route
+                  <Route
                     path="/admin/projects"
                     element={
                       <ProtectedRoute>
@@ -116,7 +116,7 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
-                   */}
+                  
                   {/* Redirect any unknown route to home */}
                   <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>

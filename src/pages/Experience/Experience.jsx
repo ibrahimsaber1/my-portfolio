@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
+import Certificates from '../../components/Certificates/Certificates';
 import './Experience.css';
 
 const Experience = () => {

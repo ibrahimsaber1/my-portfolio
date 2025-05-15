@@ -135,7 +135,16 @@ const translations = {
             }
           }
         },
-        
+        // Certificates
+        certificates: {
+            title: 'Certificates & Achievements',
+            viewAll: 'View All Certificates',
+            viewCertificate: 'View Certificate',
+            filterBy: 'Filter by Organization',
+            skills: 'Skills',
+            issueDate: 'Issue Date',
+            organization: 'Organization'
+            },
         // Common
         common: {
           loading: 'Loading...',
