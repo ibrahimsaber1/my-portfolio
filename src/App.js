@@ -30,6 +30,7 @@ import AdminEducation from './pages/Admin/AdminEducation/AdminEducation';
 import AdminSkills from './pages/Admin/AdminSkills/AdminSkills';
 import AdminContact from './pages/Admin/AdminContact/AdminContact';
 import AdminCertificates from './pages/Admin/AdminCertificates/AdminCertificates';
+
 // Protected Route Component
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -113,6 +114,14 @@ function App() {
                     element={
                       <ProtectedRoute>
                         <AdminContact />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/certificates"
+                    element={
+                      <ProtectedRoute>
+                        <AdminCertificates />
                       </ProtectedRoute>
                     }
                   />

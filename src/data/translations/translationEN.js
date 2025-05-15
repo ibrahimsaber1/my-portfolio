@@ -1,0 +1,325 @@
+export const translationEN = {
+    // Navigation
+    nav: {
+      home: 'Home',
+      projects: 'Projects',
+      experience: 'Experience',
+      contact: 'Contact',
+      admin: 'Admin'
+    },
+    
+    // Hero Section
+    hero: {
+      greeting: 'Hello, I\'m',
+      name: 'Ibrahim Saber',
+      title: 'Software Engineer & Data Science Enthusiast',
+      subtitle: 'Specializing in VFX Pipeline Development & Full-Stack Applications',
+      cta: {
+        projects: 'View Projects',
+        contact: 'Get In Touch',
+        cv: 'Download CV'
+      }
+    },
+    
+    // About Section
+    about: {
+      title: 'About Me',
+      description: 'Passionate software engineer with expertise in Django, React, FastAPI, and modern web technologies. Currently exploring data science while building VFX pipeline tools and full-stack applications.',
+      stats: {
+        yearsExperience: 'Years Experience',
+        projectsCompleted: 'Projects Completed',
+        technologies: 'Technologies',
+        certifications: 'Certifications'
+      }
+    },
+    
+    // Skills Section
+    skills: {
+      title: 'Skills & Technologies',
+      categories: {
+        languages: 'Programming Languages',
+        frontend: 'Frontend Development',
+        backend: 'Backend Development',
+        databases: 'Databases',
+        tools: 'Tools & DevOps',
+        vfx: 'VFX & Pipeline'
+      }
+    },
+    
+    // Projects Section
+    projects: {
+      title: 'Featured Projects',
+      viewAll: 'View All Projects',
+      categories: {
+        all: 'All',
+        fullstack: 'Full Stack',
+        dataScience: 'Data Science',
+        vfx: 'VFX Pipeline',
+        python: 'Python',
+        javascript: 'JavaScript'
+      },
+      details: {
+        technologies: 'Technologies Used',
+        description: 'Description',
+        liveDemo: 'Live Demo',
+        sourceCode: 'Source Code',
+        readMore: 'Read More',
+        backToProjects: 'Back to Projects',
+        relatedProjects: 'Related Projects',
+        keyFeatures: 'Key Features',
+        aboutProject: 'About this project'
+      }
+    },
+    
+    // Experience Section
+    experience: {
+      title: 'Work Experience',
+      present: 'Present',
+      responsibilities: 'Key Responsibilities',
+      workExperience: 'Work Experience',
+      education: 'Education',
+      duration: 'Duration',
+      location: 'Location',
+      current: 'Current'
+    },
+    
+    // Education Section
+    education: {
+      title: 'Education',
+      degree: 'Degree',
+      field: 'Field of Study',
+      institution: 'Institution',
+      duration: 'Duration'
+    },
+    
+    // Certificates Section
+    certificates: {
+      title: 'Certificates & Achievements',
+      viewAll: 'View All Certificates',
+      viewCertificate: 'View Certificate',
+      filterBy: 'Filter by Organization',
+      allOrganizations: 'All Organizations',
+      skills: 'Skills',
+      issueDate: 'Issue Date',
+      organization: 'Organization',
+      credentialId: 'Credential ID'
+    },
+    
+    // Contact Section
+    contact: {
+      title: 'Get In Touch',
+      subtitle: 'Feel free to reach out for collaborations or just a friendly hello',
+      form: {
+        name: 'Your Name',
+        email: 'Your Email',
+        subject: 'Subject',
+        message: 'Message',
+        send: 'Send Message',
+        sending: 'Sending...',
+        success: 'Message sent successfully!',
+        error: 'Error sending message. Please try again.'
+      },
+      info: {
+        title: 'Get in touch',
+        email: 'Email',
+        phone: 'Phone',
+        location: 'Location',
+        linkedin: 'LinkedIn',
+        github: 'GitHub',
+        connectWithMe: 'Connect with me'
+      }
+    },
+    
+    // Footer
+    footer: {
+      rights: 'All rights reserved',
+      madeWith: 'Made with ❤️ by Ibrahim Saber',
+      quickLinks: 'Quick Links',
+      contactInfo: 'Contact Info',
+      resources: 'Resources',
+      downloadCV: 'Download CV',
+      adminPanel: 'Admin Panel'
+    },
+    
+    // Admin
+    admin: {
+      login: {
+        title: 'Admin Login',
+        email: 'Email',
+        password: 'Password',
+        button: 'Login',
+        error: 'Invalid credentials',
+        credentials: 'Admin credentials:'
+      },
+      dashboard: {
+        title: 'Admin Dashboard',
+        welcome: 'Welcome back',
+        logout: 'Logout',
+        totalProjects: 'Total Projects',
+        messages: 'Messages',
+        visitors: 'Visitors',
+        pageViews: 'Page Views',
+        viewSite: 'View Site',
+        analytics: 'Analytics',
+        sections: {
+          projects: 'Manage Projects',
+          experience: 'Manage Experience',
+          education: 'Manage Education',
+          skills: 'Manage Skills',
+          certificates: 'Manage Certificates',
+          contact: 'Contact Messages'
+        },
+        descriptions: {
+          projects: 'Manage your project portfolio',
+          experience: 'Update work experience',
+          education: 'Manage education details',
+          skills: 'Update skills and technologies',
+          certificates: 'Manage certificates and achievements',
+          contact: 'View contact messages'
+        }
+      },
+      projects: {
+        title: 'Manage Projects',
+        addNew: 'Add New Project',
+        editProject: 'Edit Project',
+        deleteProject: 'Delete Project',
+        projectTitle: 'Project Title',
+        category: 'Category',
+        description: 'Description',
+        technologies: 'Technologies',
+        features: 'Features',
+        liveUrl: 'Live URL',
+        githubUrl: 'GitHub URL',
+        date: 'Date',
+        teamProject: 'Team Project',
+        teamSize: 'Team Size',
+        saveProject: 'Save Project',
+        updateProject: 'Update Project',
+        cancel: 'Cancel'
+      },
+      experience: {
+        title: 'Manage Experience',
+        addNew: 'Add New Experience',
+        editExperience: 'Edit Experience',
+        deleteExperience: 'Delete Experience',
+        jobTitle: 'Job Title',
+        company: 'Company',
+        location: 'Location',
+        duration: 'Duration',
+        current: 'Current Position',
+        description: 'Description',
+        technologies: 'Technologies',
+        saveExperience: 'Save Experience',
+        updateExperience: 'Update Experience',
+        cancel: 'Cancel',
+        addDescriptionPoint: 'Add Description Point'
+      },
+      education: {
+        title: 'Manage Education',
+        addNew: 'Add New Education',
+        editEducation: 'Edit Education',
+        deleteEducation: 'Delete Education',
+        degree: 'Degree',
+        institution: 'Institution',
+        location: 'Location',
+        duration: 'Duration',
+        description: 'Description (Optional)',
+        saveEducation: 'Save Education',
+        updateEducation: 'Update Education',
+        cancel: 'Cancel'
+      },
+      skills: {
+        title: 'Manage Skills',
+        addNew: 'Add New Skill',
+        editSkill: 'Edit Skill',
+        deleteSkill: 'Delete Skill',
+        skillName: 'Skill Name',
+        iconName: 'Icon Name',
+        skillLevel: 'Skill Level',
+        category: 'Category',
+        saveSkill: 'Save Skill',
+        updateSkill: 'Update Skill',
+        cancel: 'Cancel'
+      },
+      certificates: {
+        title: 'Manage Certificates',
+        addNew: 'Add New Certificate',
+        editCertificate: 'Edit Certificate',
+        deleteCertificate: 'Delete Certificate',
+        certificateTitle: 'Certificate Title',
+        organization: 'Organization',
+        issueDate: 'Issue Date',
+        credentialId: 'Credential ID',
+        skills: 'Skills (comma-separated)',
+        certificateImage: 'Certificate Image/PDF',
+        uploadCertificate: 'Upload Certificate',
+        current: 'Current',
+        saveCertificate: 'Save Certificate',
+        updateCertificate: 'Update Certificate',
+        cancel: 'Cancel'
+      },
+      contact: {
+        title: 'Contact Messages',
+        allMessages: 'All Messages',
+        unread: 'Unread',
+        read: 'Read',
+        markAsRead: 'Mark as Read',
+        markAsUnread: 'Mark as Unread',
+        delete: 'Delete',
+        noSelection: 'Select a message to view details',
+        from: 'From',
+        email: 'Email',
+        date: 'Date',
+        subject: 'Subject',
+        message: 'Message'
+      }
+    },
+    
+    // Common
+    common: {
+      loading: 'Loading...',
+      error: 'Error',
+      success: 'Success',
+      save: 'Save',
+      cancel: 'Cancel',
+      edit: 'Edit',
+      delete: 'Delete',
+      add: 'Add',
+      update: 'Update',
+      back: 'Back',
+      next: 'Next',
+      previous: 'Previous',
+      yes: 'Yes',
+      no: 'No',
+      confirmDelete: 'Are you sure you want to delete this?',
+      noData: 'No data available',
+      search: 'Search',
+      filter: 'Filter',
+      sort: 'Sort',
+      actions: 'Actions',
+      view: 'View',
+      close: 'Close',
+      submit: 'Submit',
+      reset: 'Reset',
+      download: 'Download',
+      upload: 'Upload',
+      selectFile: 'Select File',
+      dragDrop: 'Drag and drop files here',
+      or: 'or',
+      optional: 'Optional',
+      required: 'Required',
+      example: 'Example',
+      description: 'Description',
+      details: 'Details',
+      status: 'Status',
+      active: 'Active',
+      inactive: 'Inactive',
+      enabled: 'Enabled',
+      disabled: 'Disabled',
+      new: 'New',
+      total: 'Total',
+      darkMode: 'Dark Mode',
+      lightMode: 'Light Mode',
+      language: 'Language'
+    }
+  };
