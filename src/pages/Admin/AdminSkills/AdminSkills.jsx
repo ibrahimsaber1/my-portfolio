@@ -30,6 +30,7 @@ const AdminSkills = () => {
     { id: 'frontend', label: 'Frontend Development' },
     { id: 'backend', label: 'Backend Development' },
     { id: 'databases', label: 'Databases' },
+    { id: 'dataAnalysis', label: 'Data Analysis' },
     { id: 'tools', label: 'Tools & DevOps' },
     { id: 'vfx', label: 'VFX & Pipeline' }
   ];
