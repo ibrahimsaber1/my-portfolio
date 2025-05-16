@@ -88,12 +88,60 @@
   gap: var(--spacing-md);
 }
 
-.pdf-viewer {
-  width: 100%;
-  height: 80vh;
-  border: none;
+/* PDF Info Card styling */
+.pdf-info-card {
+  background-color: var(--bg-secondary);
   border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
   box-shadow: 0 4px 20px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+}
+
+.pdf-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--shadow-color);
+  border-color: var(--primary-color);
+}
+
+.pdf-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.pdf-icon svg {
+  color: var(--primary-color);
+}
+
+.pdf-info-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.pdf-info-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.pdf-filename {
+  font-family: monospace;
+  background-color: var(--bg-tertiary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  display: inline-block;
+  margin-bottom: var(--spacing-lg) !important;
+}
+
+.pdf-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 .certificate-image {
@@ -113,6 +161,27 @@
   border-radius: var(--radius-lg);
   text-align: center;
   color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.error-display h3 {
+  color: var(--text-primary);
+  margin-top: var(--spacing-md);
+}
+
+.file-path {
+  background-color: var(--bg-tertiary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-family: monospace;
+  width: 100%;
+  overflow-wrap: break-word;
+  text-align: left;
 }
 
 .certificate-skills-section {
@@ -155,7 +224,11 @@
     gap: var(--spacing-sm);
   }
   
-  .pdf-viewer {
-    height: 500px;
+  .pdf-actions {
+    flex-direction: column;
+  }
+  
+  .pdf-actions .btn {
+    width: 100%;
   }
 }

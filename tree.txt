@@ -1,141 +1,159 @@
-/mnt/EA20BC2D20BBFF1F/github projects/my-portfolio
-.:
-src
-README.md
-public
-package-lock.json
-package.json
-node_modules
-
-./src:
-   -----
-   
-./public:
-robots.txt
-manifest.json
-logo512.png
-logo192.png
-locales
-index.html
-images
-favicon.ico
-cv
-
-./public/locales:
-
-./public/images:
-
-./public/cv:
-
-./public/cv/certificates/:
-other  maharatech  hackerRanck  google_data_analysis  epsilon  cs50  AUC
-./other:
-postgresSql_simplelearn.pdf  FWD_DATA_Analysis.pdf
-
-./maharatech:
-node.ls_maharatech.pdf  mongoDB_maharatech.pdf  JAVASCRIPT_maharatech.pdf   clean_code_maharatech.pdf
-network_maharatech.pdf  linux_maharatech.pdf    intro_to_db_maharatech.pdf
-
-./hackerRanck:
-SQL_ITERMEDIATE_hACKERrANK.pdf  SQL_basic_hackerRank.pdf  python_bigginer_hackerRank.pdf
-
-./google_data_analysis:
-'Share Data Through the Art of Visualization.pdf'      'Data Analysis with R Programming.pdf'
- Prepare_Data_for_Exploration.pdf                       Coursera_Process_data_from_dirty_to_clean.pdf
-'Google Data Analytics Capstone: Complete a Case.pdf'  'Ask Questions to Make Data-Driven Decisions.pdf'
-'Foundations: Data, Data, Everywhere.pdf'              'Analyze Data to Answer Questions.pdf'
-
-./epsilon:
-epsilon_data_analysis.pdf
-
-./cs50:
-CS50P.pdf
-
-Dev02.User@DEV02 MINGW64 /d/FOR_TESTING/ibrahim/my-portfolio/src (main)
-$ ls -rR
-.:
-styles/  setupTests.js  reportWebVitals.js  pages/  logo.svg  index.js  index.css  hooks/  data/  contexts/  components/  App.test.js  App.js  App.css
-
-./styles:
-global.css
-
-./pages:
-Projects/  ProjectDetail/  Home/  Experience/  Contact/  Admin/
-
-./pages/Projects:
-Projects.jsx  Projects.css
-
-./pages/ProjectDetail:
-ProjectDetail.jsx  ProjectDetail.css
-
-./pages/Home:
-Home.jsx  Home.css
-
-./pages/Experience:
-Experience.jsx  Experience.css
-
-./pages/Contact:
-Contact.jsx  Contact.css
-
-./pages/Admin:
-AdminSkills/  AdminProjects/  AdminLogin/  AdminExperience/  AdminEducation/  AdminDashboard/  AdminContact/  AdminCertificates/
-
-./pages/Admin/AdminSkills:
-AdminSkills.jsx  AdminSkills.css
-
-./pages/Admin/AdminProjects:
-AdminProjects.jsx  AdminProjects.css
-
-./pages/Admin/AdminLogin:
-AdminLogin.jsx  AdminLogin.css
-
-./pages/Admin/AdminExperience:
-AdminExperience.jsx  AdminExperience.css
-
-./pages/Admin/AdminEducation:
-AdminEducation.jsx  AdminEducation.css
-
-./pages/Admin/AdminDashboard:
-AdminDashboard.jsx  AdminDashboard.css
-
-./pages/Admin/AdminContact:
-AdminContact.jsx  AdminContact.css
-
-./pages/Admin/AdminCertificates:
-AdminCertificates.jsx  AdminCertificates.css
-
-./hooks:
-useSkills.js  useProjects.js  useCertificates.js
-
-./data:
-translations.js  translations/  skillsData.js  projectsData.js  certificatesData.js
-
-./data/translations:
-translationFR.js  translationES.js  translationEN.js  translationAR.js
-
-./contexts:
-ThemeContext.js  LanguageContext.js  AuthContext.js
-
-./components:
-SkillCard/  ScrollToTop.jsx  ProtectedRoute.jsx  ProjectCard/  LoadingScreen/  Layout/  Certificates/
-
-./components/SkillCard:
-SkillCard.jsx  SkillCard.css
-
-./components/ProjectCard:
-ProjectCard.jsx  ProjectCard.css
-
-./components/LoadingScreen:
-LoadingScreen.jsx  LoadingScreen.css
-
-./components/Layout:
-Header/  Footer/
-
-./components/Layout/Header:
-Header.jsx  Header.css
-
-./components/Layout/Footer:
-Footer.jsx  Footer.css
-
-./components/Certificates:
-Certificates.jsx  Certificates.css
+├── package.json
+├── package-lock.json
+├── public
+│   ├── certificates
+│   │   ├── AUC
+│   │   │   ├── english102_march.png
+│   │   │   └── english102_may.png
+│   │   ├── cs50
+│   │   │   └── CS50P.pdf
+│   │   ├── epsilon
+│   │   │   └── epsilon_data_analysis.pdf
+│   │   ├── google_data_analysis
+│   │   │   ├── Analyze Data to Answer Questions.pdf
+│   │   │   ├── Ask Questions to Make Data-Driven Decisions.pdf
+│   │   │   ├── Coursera_Process_data_from_dirty_to_clean.pdf
+│   │   │   ├── Data Analysis with R Programming.pdf
+│   │   │   ├── Foundations: Data, Data, Everywhere.pdf
+│   │   │   ├── Google Data Analytics Capstone: Complete a Case.pdf
+│   │   │   ├── Prepare_Data_for_Exploration.pdf
+│   │   │   └── Share Data Through the Art of Visualization.pdf
+│   │   ├── hackerRanck
+│   │   │   ├── python_bigginer_hackerRank.pdf
+│   │   │   ├── SQL_basic_hackerRank.pdf
+│   │   │   └── SQL_ITERMEDIATE_hACKERrANK.pdf
+│   │   ├── maharatech
+│   │   │   ├── clean_code_maharatech.pdf
+│   │   │   ├── intro_to_db_maharatech.pdf
+│   │   │   ├── JAVASCRIPT_maharatech.pdf
+│   │   │   ├── linux_maharatech.pdf
+│   │   │   ├── mongoDB_maharatech.pdf
+│   │   │   ├── network_maharatech.pdf
+│   │   │   └── node.ls_maharatech.pdf
+│   │   └── other
+│   │       ├── FWD_DATA_Analysis.pdf
+│   │       └── postgresSql_simplelearn.pdf
+│   ├── cv
+│   │   └── Ibrahim_Saber_CV.pdf
+│   ├── favicon.ico
+│   ├── images
+│   │   └── profile-photo.jpg
+│   ├── index.html
+│   ├── locales
+│   │   ├── ar.json
+│   │   ├── de.json
+│   │   ├── en.json
+│   │   ├── es.json
+│   │   ├── fr.json
+│   │   ├── it.json
+│   │   ├── ja.json
+│   │   ├── ko.json
+│   │   ├── pt.json
+│   │   └── zh.json
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── README_old.md
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── components
+│   │   ├── Certificates
+│   │   │   ├── Certificates.css
+│   │   │   └── Certificates.jsx
+│   │   ├── Layout
+│   │   │   ├── Footer
+│   │   │   │   ├── Footer.css
+│   │   │   │   └── Footer.jsx
+│   │   │   └── Header
+│   │   │       ├── Header.css
+│   │   │       └── Header.jsx
+│   │   ├── LoadingScreen
+│   │   │   ├── LoadingScreen.css
+│   │   │   └── LoadingScreen.jsx
+│   │   ├── ProjectCard
+│   │   │   ├── ProjectCard.css
+│   │   │   └── ProjectCard.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   ├── SkillCard
+│   │   │   ├── SkillCard.css
+│   │   │   └── SkillCard.jsx
+│   │   └── TranslationWidget
+│   │       ├── TranslationWidget.css
+│   │       └── TranslationWidget.jsx
+│   ├── contexts
+│   │   ├── AuthContext.js
+│   │   ├── LanguageContext.js
+│   │   └── ThemeContext.js
+│   ├── data
+│   │   ├── certificatesData.js
+│   │   ├── educationData.js
+│   │   ├── experienceData.js
+│   │   ├── projectsData.js
+│   │   ├── skillsData.js
+│   │   └── translations.js
+│   ├── hooks
+│   │   ├── useCertificates.js
+│   │   ├── useEducation.js
+│   │   ├── useExperience.js
+│   │   ├── useProjects.js
+│   │   └── useSkills.js
+│   ├── index.css
+│   ├── index.js
+│   ├── pages
+│   │   ├── Admin
+│   │   │   ├── AdminCertificates
+│   │   │   │   ├── AdminCertificates.css
+│   │   │   │   └── AdminCertificates.jsx
+│   │   │   ├── AdminContact
+│   │   │   │   ├── AdminContact.css
+│   │   │   │   └── AdminContact.jsx
+│   │   │   ├── AdminDashboard
+│   │   │   │   ├── AdminDashboard.css
+│   │   │   │   └── AdminDashboard.jsx
+│   │   │   ├── AdminEducation
+│   │   │   │   ├── AdminEducation.css
+│   │   │   │   └── AdminEducation.jsx
+│   │   │   ├── AdminExperience
+│   │   │   │   ├── AdminExperience.css
+│   │   │   │   └── AdminExperience.jsx
+│   │   │   ├── AdminLogin
+│   │   │   │   ├── AdminLogin.css
+│   │   │   │   └── AdminLogin.jsx
+│   │   │   ├── AdminProjects
+│   │   │   │   ├── AdminProjects.css
+│   │   │   │   └── AdminProjects.jsx
+│   │   │   └── AdminSkills
+│   │   │       ├── AdminSkills.css
+│   │   │       └── AdminSkills.jsx
+│   │   ├── CertificatesPage
+│   │   │   ├── CertificatesPage.css
+│   │   │   └── CertificatesPage.jsx
+│   │   ├── CertificateView
+│   │   │   ├── CertificateView.css
+│   │   │   └── CertificateView.jsx
+│   │   ├── Contact
+│   │   │   ├── Contact.css
+│   │   │   └── Contact.jsx
+│   │   ├── Experience
+│   │   │   ├── Experience.css
+│   │   │   └── Experience.jsx
+│   │   ├── Home
+│   │   │   ├── Home.css
+│   │   │   └── Home.jsx
+│   │   ├── ProjectDetail
+│   │   │   ├── ProjectDetail.css
+│   │   │   └── ProjectDetail.jsx
+│   │   └── Projects
+│   │       ├── Projects.css
+│   │       └── Projects.jsx
+│   ├── reportWebVitals.js
+│   ├── services
+│   │   └── translationService.js
+│   ├── setupTests.js
+│   └── styles
+│       └── global.css
+└── tree.txt

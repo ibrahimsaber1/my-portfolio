@@ -36,7 +36,9 @@
       "backend": "Backend Development",
       "databases": "Databases",
       "tools": "Tools & DevOps",
-      "vfx": "VFX & Pipeline"
+      "vfx": "VFX & Pipeline",
+      "dataScience":"Data Science",
+      "dataAnalysis": "Data Analysis"
     }
   },
   "projects": {

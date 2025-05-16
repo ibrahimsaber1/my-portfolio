@@ -22,6 +22,7 @@ const CertificateView = () => {
       const foundCertificate = certificates.find(cert => cert.id.toString() === id);
       if (foundCertificate) {
         setCertificate(foundCertificate);
+        console.log("Found certificate:", foundCertificate);
         
         // Determine file type from extension
         const imageUrl = foundCertificate.image;
@@ -45,10 +46,6 @@ const CertificateView = () => {
     }
   }, [id, certificates, loading]);
 
-  const handleFileError = () => {
-    setFileError(true);
-  };
-
   if (loading) return <LoadingScreen />;
   if (error || !certificate) {
     return (
@@ -61,9 +58,17 @@ const CertificateView = () => {
     );
   }
 
-  const certificateUrl = `/cv/certificates${certificate.image.substring(certificate.image.lastIndexOf('/'))}`;
-  const downloadUrl = certificateUrl;
-  const fileName = certificate.image.split('/').pop();
+  // Get file name from path
+  const getFileName = (path) => {
+    return path.split('/').pop();
+  };
+
+  // Get filename
+  const fileName = getFileName(certificate.image);
+  
+  // Use the correct path - instead of embedding as iframe, link to directly download or open in a new tab
+  // This avoids the issue of the PDF being displayed as your app
+  const downloadPath = certificate.image;
 
   return (
     <motion.div 
@@ -123,40 +128,49 @@ const CertificateView = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {fileError ? (
-            <div className="error-display">
-              <FiAlertCircle size={48} />
-              <p>{t('certificates.unsupportedFormat')}</p>
-              <p>{t('certificates.checkAdmin')}</p>
-              <p className="file-path">{certificateUrl}</p>
-            </div>
-          ) : fileType === 'pdf' ? (
+          {fileType === 'pdf' ? (
             <div className="pdf-container">
-              <iframe 
-                src={certificateUrl} 
-                title={certificate.title}
-                className="pdf-viewer"
-                onError={handleFileError}
-              />
-              <a 
-                href={downloadUrl} 
-                download={fileName}
-                className="btn btn-primary download-btn"
-              >
-                <FiDownload />
-                {t('certificates.download')}
-              </a>
+              <div className="pdf-info-card">
+                <div className="pdf-icon">
+                  <FiAward size={80} />
+                </div>
+                <h3>{certificate.title}</h3>
+                <p>PDF certificate from {certificate.organization}</p>
+                <p className="pdf-filename">{fileName}</p>
+                
+                <div className="pdf-actions">
+                  <a 
+                    href={downloadPath} 
+                    download={fileName}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiDownload />
+                    {t('certificates.download')}
+                  </a>
+                  
+                  <a 
+                    href={downloadPath} 
+                    className="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View in New Tab
+                  </a>
+                </div>
+              </div>
             </div>
           ) : fileType === 'image' ? (
             <div className="image-container">
               <img 
-                src={certificateUrl} 
+                src={downloadPath} 
                 alt={certificate.title}
                 className="certificate-image"
-                onError={handleFileError}
+                onError={() => setFileError(true)}
               />
               <a 
-                href={downloadUrl} 
+                href={downloadPath} 
                 download={fileName}
                 className="btn btn-primary download-btn"
               >
@@ -167,9 +181,18 @@ const CertificateView = () => {
           ) : (
             <div className="error-display">
               <FiAlertCircle size={48} />
-              <p>{t('certificates.unsupportedFormat')}</p>
+              <h3>{t('certificates.unsupportedFormat')}</h3>
               <p>{t('certificates.checkAdmin')}</p>
-              <p className="file-path">{certificateUrl}</p>
+              <p className="file-path">{certificate.image}</p>
+            </div>
+          )}
+          
+          {fileError && (
+            <div className="error-display">
+              <FiAlertCircle size={48} />
+              <h3>{t('certificates.unsupportedFormat')}</h3>
+              <p>{t('certificates.checkAdmin')}</p>
+              <p className="file-path">{certificate.image}</p>
             </div>
           )}
         </motion.div>
