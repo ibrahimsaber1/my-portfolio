@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FiDownload, FiArrowLeft, FiCalendar, FiAward, FiTag } from 'react-icons/fi';
+import { FiDownload, FiArrowLeft, FiCalendar, FiAward, FiTag, FiAlertCircle } from 'react-icons/fi';
 import { useCertificates } from '../../hooks/useCertificates';
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen';
 import './CertificateView.css';
@@ -15,6 +15,7 @@ const CertificateView = () => {
   const [certificate, setCertificate] = useState(null);
   const [fileType, setFileType] = useState('');
   const [error, setError] = useState(null);
+  const [fileError, setFileError] = useState(false);
 
   useEffect(() => {
     if (!loading) {
@@ -22,12 +23,17 @@ const CertificateView = () => {
       if (foundCertificate) {
         setCertificate(foundCertificate);
         
-        // Determine file type
+        // Determine file type from extension
         const imageUrl = foundCertificate.image;
         if (imageUrl) {
-          if (imageUrl.endsWith('.pdf')) {
+          if (imageUrl.toLowerCase().endsWith('.pdf')) {
             setFileType('pdf');
-          } else if (imageUrl.endsWith('.jpg') || imageUrl.endsWith('.jpeg') || imageUrl.endsWith('.png')) {
+          } else if (
+            imageUrl.toLowerCase().endsWith('.jpg') || 
+            imageUrl.toLowerCase().endsWith('.jpeg') || 
+            imageUrl.toLowerCase().endsWith('.png') || 
+            imageUrl.toLowerCase().endsWith('.gif')
+          ) {
             setFileType('image');
           } else {
             setFileType('unknown');
@@ -39,17 +45,25 @@ const CertificateView = () => {
     }
   }, [id, certificates, loading]);
 
+  const handleFileError = () => {
+    setFileError(true);
+  };
+
   if (loading) return <LoadingScreen />;
   if (error || !certificate) {
     return (
       <div className="error-container">
         <h2>{error || 'Certificate not found'}</h2>
-        <Link to="/experience" className="btn btn-primary">
-          Back to Certificates
+        <Link to="/certificates" className="btn btn-primary">
+          {t('certificates.backTo')}
         </Link>
       </div>
     );
   }
+
+  const certificateUrl = `/cv/certificates${certificate.image.substring(certificate.image.lastIndexOf('/'))}`;
+  const downloadUrl = certificateUrl;
+  const fileName = certificate.image.split('/').pop();
 
   return (
     <motion.div 
@@ -68,7 +82,7 @@ const CertificateView = () => {
         >
           <button 
             className="back-button"
-            onClick={() => navigate('/experience')}
+            onClick={() => navigate('/certificates')}
           >
             <FiArrowLeft />
             {t('certificates.backTo')}
@@ -109,16 +123,24 @@ const CertificateView = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {fileType === 'pdf' ? (
+          {fileError ? (
+            <div className="error-display">
+              <FiAlertCircle size={48} />
+              <p>{t('certificates.unsupportedFormat')}</p>
+              <p>{t('certificates.checkAdmin')}</p>
+              <p className="file-path">{certificateUrl}</p>
+            </div>
+          ) : fileType === 'pdf' ? (
             <div className="pdf-container">
               <iframe 
-                src={`${certificate.image}#view=FitH`} 
+                src={certificateUrl} 
                 title={certificate.title}
                 className="pdf-viewer"
+                onError={handleFileError}
               />
               <a 
-                href={certificate.image} 
-                download
+                href={downloadUrl} 
+                download={fileName}
                 className="btn btn-primary download-btn"
               >
                 <FiDownload />
@@ -128,13 +150,14 @@ const CertificateView = () => {
           ) : fileType === 'image' ? (
             <div className="image-container">
               <img 
-                src={certificate.image} 
+                src={certificateUrl} 
                 alt={certificate.title}
                 className="certificate-image"
+                onError={handleFileError}
               />
               <a 
-                href={certificate.image} 
-                download
+                href={downloadUrl} 
+                download={fileName}
                 className="btn btn-primary download-btn"
               >
                 <FiDownload />
@@ -143,8 +166,10 @@ const CertificateView = () => {
             </div>
           ) : (
             <div className="error-display">
-              <p>Unsupported file format or certificate not available</p>
-              <p>Please check the admin panel to update the certificate image.</p>
+              <FiAlertCircle size={48} />
+              <p>{t('certificates.unsupportedFormat')}</p>
+              <p>{t('certificates.checkAdmin')}</p>
+              <p className="file-path">{certificateUrl}</p>
             </div>
           )}
         </motion.div>

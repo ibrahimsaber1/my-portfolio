@@ -30,13 +30,21 @@ export const skillsData = {
     { name: 'SQLite', level: 75, icon: 'SiSqlite' },
     { name: 'Redis', level: 70, icon: 'SiRedis' }
   ],
+  dataScience: [
+    { name: 'Pandas', level: 85, icon: 'SiPandas' },
+    { name: 'NumPy', level: 80, icon: 'SiNumpy' },
+    { name: 'Matplotlib', level: 75, icon: 'SiPython' },
+    { name: 'Seaborn', level: 75, icon: 'SiPython' },
+    { name: 'Scikit-learn', level: 70, icon: 'SiScikit' },
+    { name: 'Jupyter', level: 85, icon: 'SiJupyter' }
+  ],
   dataAnalysis: [
     { name: 'Excel', level: 85, icon: 'SiMicrosoftexcel' },
     { name: 'Power BI', level: 80, icon: 'SiPowerbi' },
     { name: 'Power Query', level: 75, icon: 'SiMicrosoftoffice' },
     { name: 'Tableau', level: 80, icon: 'SiTableau' },
     { name: 'Looker', level: 70, icon: 'SiLooker' },
-    { name: 'Pandas', level: 85, icon: 'SiPandas' }
+    { name: 'SQL Analytics', level: 85, icon: 'SiMysql' }
   ],
   tools: [
     { name: 'Git', level: 90, icon: 'FaGit' },
@@ -47,12 +55,12 @@ export const skillsData = {
     { name: 'Jupyter', level: 85, icon: 'SiJupyter' }
   ],
   vfx: [
-    { name: 'Maya', level: 80, icon: 'SiAutodesk' },
-    { name: 'Houdini', level: 75, icon: 'SiHoudini' },
-    { name: 'Nuke', level: 70, icon: 'SiNuke' },
+    { name: 'OpenTimelineIO', level: 85, icon: 'SiOpenminded' },
+    { name: 'OpenColorIO', level: 80, icon: 'SiOpensource' },
     { name: 'OpenPype', level: 85, icon: 'SiOpenpype' },
     { name: 'PySide2/PyQt', level: 85, icon: 'SiQt' },
-    { name: 'Kitsu', level: 80, icon: 'SiKitsu' }
+    { name: 'Kitsu', level: 80, icon: 'SiKitsu' },
+    { name: 'Maya/Houdini APIs', level: 75, icon: 'SiAutodesk' }
   ]
 };
 
@@ -75,6 +83,10 @@ export const skillsMetadata = {
       title: 'Databases',
       description: 'SQL and NoSQL database systems'
     },
+    dataScience: {
+      title: 'Data Science',
+      description: 'Libraries and tools for data science and machine learning'
+    },
     dataAnalysis: {
       title: 'Data Analysis',
       description: 'Tools and technologies for data analytics and visualization'
@@ -85,7 +97,7 @@ export const skillsMetadata = {
     },
     vfx: {
       title: 'VFX & Pipeline',
-      description: 'Visual effects software and pipeline tools'
+      description: 'APIs and tools for VFX pipeline development'
     }
   }
 };

@@ -15,7 +15,7 @@ export const certificatesData = [
     organization: 'HackerRank',
     issueDate: 'Oct 2024',
     credentialId: null,
-    image: '/certificates/hackerRanck/python_bigginer_hackerRank.pdf',
+    image: '/certificates/hackerRank/python_bigginer_hackerRank.pdf',
     skills: ['Python', 'Programming']
   },
   {
@@ -24,7 +24,7 @@ export const certificatesData = [
     organization: 'HackerRank',
     issueDate: 'Aug 2024',
     credentialId: null,
-    image: '/certificates/hackerRanck/SQL_basic_hackerRank.pdf',
+    image: '/certificates/hackerRank/SQL_basic_hackerRank.pdf',
     skills: ['SQL', 'Database']
   },
   {
@@ -33,7 +33,7 @@ export const certificatesData = [
     organization: 'HackerRank',
     issueDate: 'Jul 2024',
     credentialId: null,
-    image: '/certificates/hackerRanck/SQL_ITERMEDIATE_hACKERrANK.pdf',
+    image: '/certificates/hackerRank/SQL_ITERMEDIATE_hACKERrANK.pdf',
     skills: ['SQL', 'Database', 'Advanced Queries']
   },
   {
@@ -69,7 +69,7 @@ export const certificatesData = [
     organization: 'MaharaTech',
     issueDate: 'Jun 2024',
     credentialId: null,
-    image: '/certificates/maharatech/node.ls_maharatech.pdf',
+    image: '/certificates/maharatech/node.js_maharatech.pdf', // Fixed extension
     skills: ['Node.js', 'JavaScript', 'Backend']
   },
   {
@@ -150,7 +150,7 @@ export const certificatesData = [
     organization: 'Google',
     issueDate: 'Jun 2023',
     credentialId: null,
-    image: '/certificates/google_data_analysis/Foundations: Data, Data, Everywhere.pdf',
+    image: '/certificates/google_data_analysis/Foundations_Data_Data_Everywhere.pdf', // Fixed spaces
     skills: ['Data Analytics', 'Google']
   },
   {
@@ -159,7 +159,7 @@ export const certificatesData = [
     organization: 'Google',
     issueDate: 'Jun 2023',
     credentialId: null,
-    image: '/certificates/google_data_analysis/Ask Questions to Make Data-Driven Decisions.pdf',
+    image: '/certificates/google_data_analysis/Ask_Questions_to_Make_Data-Driven_Decisions.pdf', // Fixed spaces
     skills: ['Data Analytics', 'Google', 'Data-Driven Decisions']
   },
   {
@@ -186,7 +186,7 @@ export const certificatesData = [
     organization: 'Google',
     issueDate: 'Apr 2023',
     credentialId: null,
-    image: '/certificates/google_data_analysis/Analyze Data to Answer Questions.pdf',
+    image: '/certificates/google_data_analysis/Analyze_Data_to_Answer_Questions.pdf', // Fixed spaces
     skills: ['Data Analytics', 'Google', 'Data Analysis']
   },
   {
@@ -195,7 +195,7 @@ export const certificatesData = [
     organization: 'Google',
     issueDate: 'Mar 2023',
     credentialId: null,
-    image: '/certificates/google_data_analysis/Share Data Through the Art of Visualization.pdf',
+    image: '/certificates/google_data_analysis/Share_Data_Through_the_Art_of_Visualization.pdf', // Fixed spaces
     skills: ['Data Analytics', 'Google', 'Data Visualization']
   },
   {
@@ -204,7 +204,7 @@ export const certificatesData = [
     organization: 'Google',
     issueDate: 'Mar 2023',
     credentialId: null,
-    image: '/certificates/google_data_analysis/Data Analysis with R Programming.pdf',
+    image: '/certificates/google_data_analysis/Data_Analysis_with_R_Programming.pdf', // Fixed spaces
     skills: ['Data Analytics', 'Google', 'R Programming']
   },
   {
@@ -213,7 +213,7 @@ export const certificatesData = [
     organization: 'Google',
     issueDate: 'Jun 2021',
     credentialId: null,
-    image: '/certificates/google_data_analysis/Google Data Analytics Capstone: Complete a Case.pdf',
+    image: '/certificates/google_data_analysis/Google_Data_Analytics_Capstone_Complete_a_Case.pdf', // Fixed spaces
     skills: ['Data Analytics', 'Google', 'Case Study']
   }
 ];
