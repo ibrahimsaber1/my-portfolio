@@ -4,13 +4,14 @@
     "projects": "المشاريع",
     "experience": "الخبرة",
     "contact": "اتصل بنا",
+    "certificates": "الشهادات",
     "admin": "الإدارة"
   },
   "hero": {
     "greeting": "مرحباً، أنا",
     "name": "إبراهيم صابر",
     "title": "مهندس برمجيات ومحب لعلوم البيانات",
-    "subtitle": "متخصص في تطوير خطوط أنابيب VFX والتطبيقات الكاملة",
+    "subtitle": " متخصص في تطوير VFX Pipeline والتطبيقات الكاملة",
     "cta": {
       "projects": "عرض المشاريع",
       "contact": "تواصل معي",
@@ -18,7 +19,7 @@
     }
   },
   "about": {
-    "title": "عني",
+    "title": "نبذة عني",
     "description": "مهندس برمجيات شغوف بخبرة في Django و React و FastAPI وتقنيات الويب الحديثة. أستكشف حالياً علوم البيانات بينما أقوم ببناء أدوات خط أنابيب VFX وتطبيقات كاملة.",
     "stats": {
       "yearsExperience": "سنوات الخبرة",
@@ -43,17 +44,17 @@
     "viewAll": "عرض جميع المشاريع",
     "categories": {
       "all": "الكل",
-      "fullstack": "مكدس كامل",
+      "fullstack": "الستاك الكامل",
       "dataScience": "علوم البيانات",
       "vfx": "خط أنابيب VFX",
-      "python": "Python",
-      "javascript": "JavaScript"
+      "python": "بايثون",
+      "javascript": "جافاسكريبت"
     },
     "details": {
       "technologies": "التقنيات المستخدمة",
       "description": "الوصف",
       "liveDemo": "عرض مباشر",
-      "sourceCode": "الكود المصدري",
+      "sourceCode": "رمز المصدر",
       "readMore": "اقرأ المزيد",
       "backToProjects": "العودة للمشاريع",
       "relatedProjects": "مشاريع ذات صلة",
@@ -88,7 +89,23 @@
     "skills": "المهارات",
     "issueDate": "تاريخ الإصدار",
     "organization": "المنظمة",
-    "credentialId": "معرف الاعتماد"
+    "credentialId": "معرف الشهادة",
+    "backTo": "العودة إلى الشهادات",
+    "download": "تحميل الشهادة",
+    "notFound": "الشهادة غير موجودة",
+    "unsupportedFormat": "تنسيق ملف غير مدعوم أو الشهادة غير متاحة",
+    "checkAdmin": "يرجى التحقق من لوحة الإدارة لتحديث صورة الشهادة.",
+    "certificate": "شهادة",
+    "certificates": "الشهادات",
+    "addNew": "إضافة شهادة جديدة",
+    "edit": "تعديل الشهادة",
+    "certificateTitle": "عنوان الشهادة",
+    "certificateImage": "صورة/PDF الشهادة",
+    "uploadCertificate": "تحميل الشهادة",
+    "addCertificate": "إضافة شهادة",
+    "updateCertificate": "تحديث الشهادة",
+    "noCertificates": "لا توجد شهادات",
+    "confirmDelete": "هل أنت متأكد من حذف هذه الشهادة؟"
   },
   "contact": {
     "title": "تواصل معي",
@@ -104,7 +121,7 @@
       "error": "خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى."
     },
     "info": {
-      "title": "ابقى على تواصل",
+      "title": "ابق على تواصل",
       "email": "البريد الإلكتروني",
       "phone": "الهاتف",
       "location": "الموقع",
@@ -174,6 +191,10 @@
     "previous": "السابق",
     "yes": "نعم",
     "no": "لا",
-    "confirmDelete": "هل أنت متأكد من رغبتك في حذف هذا؟"
+    "confirmDelete": "هل أنت متأكد من رغبتك في حذف هذا؟",
+    "optional": "اختياري",
+    "commaSeparated": "مفصولة بفواصل",
+    "current": "الحالي",
+    "fileSize": "يجب أن يكون حجم الملف أقل من 5 ميجابايت"
   }
 }

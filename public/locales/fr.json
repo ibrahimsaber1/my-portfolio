@@ -4,6 +4,7 @@
     "projects": "Projets",
     "experience": "Expérience",
     "contact": "Contact",
+    "certificates": "Certificats",
     "admin": "Admin"
   },
   "hero": {
@@ -88,11 +89,27 @@
     "skills": "Compétences",
     "issueDate": "Date de Délivrance",
     "organization": "Organisation",
-    "credentialId": "ID de Certification"
+    "credentialId": "ID de Certification",
+    "backTo": "Retour aux Certificats",
+    "download": "Télécharger le Certificat",
+    "notFound": "Certificat non trouvé",
+    "unsupportedFormat": "Format de fichier non pris en charge ou certificat non disponible",
+    "checkAdmin": "Veuillez vérifier le panneau d'administration pour mettre à jour l'image du certificat.",
+    "certificate": "Certificat",
+    "certificates": "Certificats",
+    "addNew": "Ajouter un Nouveau Certificat",
+    "edit": "Modifier le Certificat",
+    "certificateTitle": "Titre du Certificat",
+    "certificateImage": "Image/PDF du Certificat",
+    "uploadCertificate": "Télécharger le Certificat",
+    "addCertificate": "Ajouter un Certificat",
+    "updateCertificate": "Mettre à jour le Certificat",
+    "noCertificates": "Aucun certificat trouvé",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce certificat ?"
   },
   "contact": {
     "title": "Contactez-moi",
-    "subtitle": "N'hésitez pas à me contacter pour des collaborations ou juste pour dire bonjour",
+    "subtitle": "N'hésitez pas à me contacter pour des collaborations ou simplement pour dire bonjour",
     "form": {
       "name": "Votre Nom",
       "email": "Votre Email",
@@ -174,6 +191,10 @@
     "previous": "Précédent",
     "yes": "Oui",
     "no": "Non",
-    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ceci?"
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ceci?",
+    "optional": "Optionnel",
+    "commaSeparated": "Séparé par des virgules",
+    "current": "Actuel",
+    "fileSize": "La taille du fichier doit être inférieure à 5Mo"
   }
 }

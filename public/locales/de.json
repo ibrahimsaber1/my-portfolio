@@ -4,6 +4,7 @@
     "projects": "Projekte",
     "experience": "Erfahrung",
     "contact": "Kontakt",
+    "certificates": "Zertifikate",
     "admin": "Admin"
   },
   "hero": {
@@ -88,7 +89,23 @@
     "skills": "Fähigkeiten",
     "issueDate": "Ausstellungsdatum",
     "organization": "Organisation",
-    "credentialId": "Zertifikats-ID"
+    "credentialId": "Zertifikats-ID",
+    "backTo": "Zurück zu Zertifikaten",
+    "download": "Zertifikat herunterladen",
+    "notFound": "Zertifikat nicht gefunden",
+    "unsupportedFormat": "Nicht unterstütztes Dateiformat oder Zertifikat nicht verfügbar",
+    "checkAdmin": "Bitte überprüfen Sie das Admin-Panel, um das Zertifikatsbild zu aktualisieren.",
+    "certificate": "Zertifikat",
+    "certificates": "Zertifikate",
+    "addNew": "Neues Zertifikat hinzufügen",
+    "edit": "Zertifikat bearbeiten",
+    "certificateTitle": "Zertifikatstitel",
+    "certificateImage": "Zertifikatsbild/PDF",
+    "uploadCertificate": "Zertifikat hochladen",
+    "addCertificate": "Zertifikat hinzufügen",
+    "updateCertificate": "Zertifikat aktualisieren",
+    "noCertificates": "Keine Zertifikate gefunden",
+    "confirmDelete": "Sind Sie sicher, dass Sie dieses Zertifikat löschen möchten?"
   },
   "contact": {
     "title": "Kontakt aufnehmen",
@@ -104,7 +121,7 @@
       "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
     },
     "info": {
-      "title": "In Kontakt treten",
+      "title": "Kontaktinformationen",
       "email": "E-Mail",
       "phone": "Telefon",
       "location": "Standort",
@@ -174,6 +191,10 @@
     "previous": "Zurück",
     "yes": "Ja",
     "no": "Nein",
-    "confirmDelete": "Sind Sie sicher, dass Sie dies löschen möchten?"
+    "confirmDelete": "Sind Sie sicher, dass Sie dies löschen möchten?",
+    "optional": "Optional",
+    "commaSeparated": "Durch Kommas getrennt",
+    "current": "Aktuell",
+    "fileSize": "Die Dateigröße muss kleiner als 5MB sein"
   }
 }
