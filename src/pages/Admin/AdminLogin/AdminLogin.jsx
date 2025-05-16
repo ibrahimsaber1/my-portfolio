@@ -87,7 +87,7 @@ const AdminLogin = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="form-input"
-                placeholder="ibrahimsaber622@gmail.com"
+                placeholder="Ibrahim email :) "
                 required
                 disabled={isLoading}
               />
@@ -105,7 +105,7 @@ const AdminLogin = () => {
                 value={formData.password}
                 onChange={handleChange}
                 className="form-input"
-                placeholder="••••••••"
+                placeholder="Ibrahim password :)"
                 required
                 disabled={isLoading}
               />
@@ -120,13 +120,7 @@ const AdminLogin = () => {
             </button>
           </form>
 
-          <div className="login-footer">
-            <p>Admin credentials:</p>
-            <code>
-              Email: ibrahimsaber622@gmail.com<br />
-              Password: admin123
-            </code>
-          </div>
+
         </motion.div>
       </div>
     </div>
@@ -134,3 +128,11 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+
+          // <div className="login-footer">
+          //   <p>Admin credentials:</p>
+          //   <code>
+          //     Email: ibrahimsaber622@gmail.com<br />
+          //     Password: admin123
+          //   </code>
+          // </div>
