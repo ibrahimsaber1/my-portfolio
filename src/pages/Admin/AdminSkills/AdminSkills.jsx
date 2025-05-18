@@ -2,18 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlus, FiEdit, FiTrash, FiSave } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import { skillsData as defaultSkillsData } from '../../../data/skillsData';
 import './AdminSkills.css';
 
 const AdminSkills = () => {
   const { t } = useTranslation();
-  const [skills, setSkills] = useState({
-    languages: [],
-    frontend: [],
-    backend: [],
-    databases: [],
-    tools: [],
-    vfx: []
-  });
+  const [skills, setSkills] = useState(defaultSkillsData);
   const [editingSkill, setEditingSkill] = useState(null);
   const [activeCategory, setActiveCategory] = useState('languages');
   const [formData, setFormData] = useState({
@@ -28,6 +22,8 @@ const AdminSkills = () => {
     { id: 'frontend', label: 'Frontend Development' },
     { id: 'backend', label: 'Backend Development' },
     { id: 'databases', label: 'Databases' },
+    { id: 'dataScience', label: 'Data Science' },
+    { id: 'dataAnalysis', label: 'Data Analysis' },
     { id: 'tools', label: 'Tools & DevOps' },
     { id: 'vfx', label: 'VFX & Pipeline' }
   ];
@@ -38,10 +34,8 @@ const AdminSkills = () => {
     if (savedSkills) {
       setSkills(JSON.parse(savedSkills));
     } else {
-      // Load default skills data if none in localStorage
-      const { skillsData } = require('../../../data/skillsData');
-      setSkills(skillsData);
-      localStorage.setItem('skills', JSON.stringify(skillsData));
+      // If no data in localStorage, use default data and save it
+      localStorage.setItem('skills', JSON.stringify(defaultSkillsData));
     }
   }, []);
   
@@ -55,11 +49,31 @@ const AdminSkills = () => {
     e.preventDefault();
     const updatedSkills = { ...skills };
     
+    // Ensure the category exists in the skills object
+    if (!updatedSkills[formData.category]) {
+      updatedSkills[formData.category] = [];
+    }
+    
     if (editingSkill) {
       // Update existing skill
-      const categorySkills = updatedSkills[editingSkill.category];
-      const index = categorySkills.findIndex(skill => skill.id === editingSkill.id);
-      categorySkills[index] = { ...formData, id: editingSkill.id };
+      const categorySkills = updatedSkills[formData.category];
+      
+      if (formData.category === editingSkill.category) {
+        // Same category - just update the skill
+        const index = categorySkills.findIndex(skill => skill.id === editingSkill.id);
+        if (index !== -1) {
+          categorySkills[index] = { ...formData, id: editingSkill.id };
+        }
+      } else {
+        // Category changed - remove from old category and add to new one
+        updatedSkills[editingSkill.category] = updatedSkills[editingSkill.category]
+          .filter(skill => skill.id !== editingSkill.id);
+        
+        updatedSkills[formData.category].push({ 
+          ...formData, 
+          id: editingSkill.id 
+        });
+      }
     } else {
       // Add new skill
       const newSkill = {
@@ -220,9 +234,9 @@ const AdminSkills = () => {
 
         {/* Skills Grid */}
         <div className="skills-grid">
-          {skills[activeCategory].map((skill) => (
+          {skills[activeCategory] && skills[activeCategory].map((skill) => (
             <motion.div 
-              key={skill.id}
+              key={skill.id || `${skill.name}-${activeCategory}`}
               className="skill-item"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -258,6 +272,11 @@ const AdminSkills = () => {
               </div>
             </motion.div>
           ))}
+          {(!skills[activeCategory] || skills[activeCategory].length === 0) && (
+            <div className="no-skills-message">
+              No skills found in this category. Add your first skill using the button above.
+            </div>
+          )}
         </div>
       </div>
     </div>

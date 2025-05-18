@@ -4,6 +4,7 @@
     "projects": "Proyectos",
     "experience": "Experiencia",
     "contact": "Contacto",
+    "certificates": "Certificados",
     "admin": "Admin"
   },
   "hero": {
@@ -88,7 +89,23 @@
     "skills": "Habilidades",
     "issueDate": "Fecha de Emisión",
     "organization": "Organización",
-    "credentialId": "ID de Credencial"
+    "credentialId": "ID de Credencial",
+    "backTo": "Volver a Certificados",
+    "download": "Descargar Certificado",
+    "notFound": "Certificado no encontrado",
+    "unsupportedFormat": "Formato de archivo no compatible o certificado no disponible",
+    "checkAdmin": "Por favor revise el panel de administración para actualizar la imagen del certificado.",
+    "certificate": "Certificado",
+    "certificates": "Certificados",
+    "addNew": "Añadir Nuevo Certificado",
+    "edit": "Editar Certificado",
+    "certificateTitle": "Título del Certificado",
+    "certificateImage": "Imagen/PDF del Certificado",
+    "uploadCertificate": "Subir Certificado",
+    "addCertificate": "Añadir Certificado",
+    "updateCertificate": "Actualizar Certificado",
+    "noCertificates": "No se encontraron certificados",
+    "confirmDelete": "¿Está seguro de que desea eliminar este certificado?"
   },
   "contact": {
     "title": "Ponerse en Contacto",
@@ -104,7 +121,7 @@
       "error": "Error al enviar el mensaje. Por favor intenta de nuevo."
     },
     "info": {
-      "title": "Ponerse en contacto",
+      "title": "Información de Contacto",
       "email": "Correo Electrónico",
       "phone": "Teléfono",
       "location": "Ubicación",
@@ -174,6 +191,10 @@
     "previous": "Anterior",
     "yes": "Sí",
     "no": "No",
-    "confirmDelete": "¿Estás seguro de que quieres eliminar esto?"
+    "confirmDelete": "¿Estás seguro de que quieres eliminar esto?",
+    "optional": "Opcional",
+    "commaSeparated": "Separado por comas",
+    "current": "Actual",
+    "fileSize": "El tamaño del archivo debe ser menor a 5MB"
   }
 }

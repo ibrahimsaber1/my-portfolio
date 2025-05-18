@@ -1,51 +1,33 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiExternalLink, FiCalendar, FiAward, FiFile } from 'react-icons/fi';
-import { certificatesData } from '../../data/certificatesData';
 import { useTranslation } from 'react-i18next';
+import { useCertificates } from '../../hooks/useCertificates';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import './Certificates.css';
 
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [imageErrors, setImageErrors] = useState({});
   const { t } = useTranslation();
+  const { certificates, loading, error, getCertificatesByOrganization } = useCertificates();
+
+  if (loading) return <LoadingScreen />;
+  if (error) return <div className="error-message">Error loading certificates</div>;
 
   // Get unique organizations
-  const organizations = ['all', ...new Set(certificatesData.map(cert => cert.organization))];
+  const organizations = ['all', ...new Set(certificates.map(cert => cert.organization))];
 
   const filteredCertificates = selectedCategory === 'all' 
-    ? certificatesData 
-    : certificatesData.filter(cert => cert.organization === selectedCategory);
+    ? certificates 
+    : getCertificatesByOrganization(selectedCategory);
 
   const handleImageError = (certificateId) => {
     setImageErrors(prev => ({
       ...prev,
       [certificateId]: true
     }));
-  };
-
-  const renderCertificateLink = (certificate) => {
-    if (imageErrors[certificate.id]) {
-      return (
-        <div className="certificate-placeholder">
-          <FiFile size={40} />
-          <p>{t('certificates.viewCertificate')}</p>
-        </div>
-      );
-    }
-
-    return (
-      <a 
-        href={certificate.image} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="view-certificate"
-        onError={() => handleImageError(certificate.id)}
-      >
-        <FiExternalLink />
-        {t('certificates.viewCertificate')}
-      </a>
-    );
   };
 
   return (
@@ -97,7 +79,20 @@ const Certificates = () => {
             </div>
             
             <div className="certificate-actions">
-              {renderCertificateLink(certificate)}
+              {imageErrors[certificate.id] ? (
+                <div className="certificate-placeholder">
+                  <FiFile size={40} />
+                  <p>{t('certificates.viewCertificate')}</p>
+                </div>
+              ) : (
+                <Link 
+                  to={`/certificates/${certificate.id}`}
+                  className="view-certificate"
+                >
+                  <FiExternalLink />
+                  {t('certificates.viewCertificate')}
+                </Link>
+              )}
             </div>
           </motion.div>
         ))}

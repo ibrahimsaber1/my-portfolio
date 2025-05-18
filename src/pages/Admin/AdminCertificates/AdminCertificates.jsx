@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiPlus, FiEdit, FiTrash, FiSave, FiUpload, FiX } from 'react-icons/fi';
+import { FiPlus, FiEdit, FiTrash, FiSave, FiX, FiUpload, FiCalendar, FiAward } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import { certificatesData as defaultCertificatesData } from '../../../data/certificatesData';
 import './AdminCertificates.css';
 
 const AdminCertificates = () => {
@@ -18,16 +19,15 @@ const AdminCertificates = () => {
   });
   const [imageFile, setImageFile] = useState(null);
 
-  // Load certificates from localStorage
+  // Load certificates from localStorage or use default data
   useEffect(() => {
     const savedCertificates = localStorage.getItem('certificates');
     if (savedCertificates) {
       setCertificates(JSON.parse(savedCertificates));
     } else {
-      // Load default certificatesData if none in localStorage
-      const { certificatesData } = require('../../../data/certificatesData');
-      setCertificates(certificatesData);
-      localStorage.setItem('certificates', JSON.stringify(certificatesData));
+      // Initialize with default data if nothing in localStorage
+      setCertificates(defaultCertificatesData);
+      localStorage.setItem('certificates', JSON.stringify(defaultCertificatesData));
     }
   }, []);
 
@@ -43,14 +43,14 @@ const AdminCertificates = () => {
     // Handle file upload here (in real app, upload to server)
     let imageUrl = formData.image;
     if (imageFile) {
-      // Simulate file upload
+      // Simulate file upload - in a real app, you'd upload to a server
       imageUrl = `/certificates/${imageFile.name}`;
     }
 
     const certificateData = {
       ...formData,
       image: imageUrl,
-      id: editingId === 'new' ? Date.now() : editingId
+      id: editingId === 'new' ? Date.now() : parseInt(editingId)
     };
 
     if (editingId === 'new') {
@@ -59,7 +59,7 @@ const AdminCertificates = () => {
     } else {
       // Update existing certificate
       const updatedCertificates = certificates.map(cert =>
-        cert.id === editingId ? certificateData : cert
+        cert.id === parseInt(editingId) ? certificateData : cert
       );
       saveCertificates(updatedCertificates);
     }
@@ -67,12 +67,19 @@ const AdminCertificates = () => {
   };
 
   const handleEdit = (certificate) => {
-    setFormData(certificate);
-    setEditingId(certificate.id);
+    setFormData({
+      title: certificate.title,
+      organization: certificate.organization,
+      issueDate: certificate.issueDate,
+      credentialId: certificate.credentialId || '',
+      image: certificate.image,
+      skills: certificate.skills || []
+    });
+    setEditingId(certificate.id.toString());
   };
 
   const handleDelete = (id) => {
-    if (window.confirm('Are you sure you want to delete this certificate?')) {
+    if (window.confirm(t('common.confirmDelete'))) {
       const filteredCertificates = certificates.filter(cert => cert.id !== id);
       saveCertificates(filteredCertificates);
     }
@@ -112,17 +119,20 @@ const AdminCertificates = () => {
     setImageFile(null);
   };
 
+  // Get unique organizations for filtering
+  const organizations = [...new Set(certificates.map(cert => cert.organization))];
+
   return (
     <div className="admin-certificates">
       <div className="container">
         <div className="admin-header">
-          <h1>Manage Certificates</h1>
+          <h1>{t('admin.dashboard.sections.certificates')}</h1>
           <button 
             className="btn btn-primary"
             onClick={() => setEditingId('new')}
           >
             <FiPlus />
-            Add New Certificate
+            {t('common.add')} {t('certificates.certificate')}
           </button>
         </div>
 
@@ -134,7 +144,7 @@ const AdminCertificates = () => {
             animate={{ opacity: 1, y: 0 }}
           >
             <div className="form-header">
-              <h2>{editingId === 'new' ? 'Add New Certificate' : 'Edit Certificate'}</h2>
+              <h2>{editingId === 'new' ? t('certificates.addNew') : t('certificates.edit')}</h2>
               <button 
                 className="btn-icon"
                 onClick={resetForm}
@@ -144,7 +154,7 @@ const AdminCertificates = () => {
             </div>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label>Certificate Title</label>
+                <label>{t('certificates.certificateTitle')}</label>
                 <input
                   type="text"
                   name="title"
@@ -158,7 +168,7 @@ const AdminCertificates = () => {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label>Organization</label>
+                  <label>{t('certificates.organization')}</label>
                   <input
                     type="text"
                     name="organization"
@@ -171,7 +181,7 @@ const AdminCertificates = () => {
                 </div>
 
                 <div className="form-group">
-                  <label>Issue Date</label>
+                  <label>{t('certificates.issueDate')}</label>
                   <input
                     type="text"
                     name="issueDate"
@@ -185,7 +195,7 @@ const AdminCertificates = () => {
               </div>
 
               <div className="form-group">
-                <label>Credential ID (Optional)</label>
+                <label>{t('certificates.credentialId')} ({t('common.optional')})</label>
                 <input
                   type="text"
                   name="credentialId"
@@ -197,7 +207,7 @@ const AdminCertificates = () => {
               </div>
 
               <div className="form-group">
-                <label>Skills (comma-separated)</label>
+                <label>{t('certificates.skills')} ({t('common.commaSeparated')})</label>
                 <input
                   type="text"
                   value={formData.skills.join(', ')}
@@ -208,7 +218,7 @@ const AdminCertificates = () => {
               </div>
 
               <div className="form-group">
-                <label>Certificate Image/PDF</label>
+                <label>{t('certificates.certificateImage')}</label>
                 <div className="file-upload-area">
                   <input
                     type="file"
@@ -219,25 +229,25 @@ const AdminCertificates = () => {
                   />
                   <label htmlFor="certificate-file" className="file-label">
                     <FiUpload />
-                    {imageFile ? imageFile.name : 'Upload Certificate'}
+                    {imageFile ? imageFile.name : t('certificates.uploadCertificate')}
                   </label>
                 </div>
                 {formData.image && !imageFile && (
-                  <p className="current-file">Current: {formData.image}</p>
+                  <p className="current-file">{t('common.current')}: {formData.image}</p>
                 )}
               </div>
 
               <div className="form-actions">
                 <button type="submit" className="btn btn-primary">
                   <FiSave />
-                  {editingId === 'new' ? 'Add Certificate' : 'Update Certificate'}
+                  {editingId === 'new' ? t('certificates.addCertificate') : t('certificates.updateCertificate')}
                 </button>
                 <button 
                   type="button" 
                   className="btn btn-secondary"
                   onClick={resetForm}
                 >
-                  Cancel
+                  {t('common.cancel')}
                 </button>
               </div>
             </form>
@@ -246,44 +256,75 @@ const AdminCertificates = () => {
 
         {/* Certificates List */}
         <div className="certificates-list">
-          {certificates.map((certificate) => (
-            <motion.div 
-              key={certificate.id}
-              className="certificate-item"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              <div className="certificate-content">
-                <h3>{certificate.title}</h3>
-                <p className="organization">{certificate.organization}</p>
-                <div className="certificate-meta">
-                  <span>{certificate.issueDate}</span>
+          <div className="organizations-sidebar">
+            <h3>{t('certificates.filterBy')}</h3>
+            <div className="organization-list">
+              {organizations.map(org => (
+                <div key={org} className="organization-item">
+                  <span className="org-name">{org}</span>
+                  <span className="org-count">
+                    {certificates.filter(cert => cert.organization === org).length}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="certificates-grid">
+            {certificates.map((certificate) => (
+              <motion.div 
+                key={certificate.id}
+                className="certificate-item"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+              >
+                <div className="certificate-content">
+                  <div className="certificate-header">
+                    <div className="certificate-icon">
+                      <FiAward />
+                    </div>
+                    <div className="certificate-date">
+                      <FiCalendar />
+                      {certificate.issueDate}
+                    </div>
+                  </div>
+                  
+                  <h3>{certificate.title}</h3>
+                  <p className="organization">{certificate.organization}</p>
+                  
                   {certificate.credentialId && (
-                    <span>ID: {certificate.credentialId}</span>
+                    <p className="credential-id">ID: {certificate.credentialId}</p>
                   )}
+                  
+                  <div className="certificate-skills">
+                    {certificate.skills.map((skill, index) => (
+                      <span key={index} className="skill-tag">{skill}</span>
+                    ))}
+                  </div>
+                  
+                  <div className="certificate-path">
+                    {certificate.image}
+                  </div>
                 </div>
-                <div className="certificate-skills">
-                  {certificate.skills.map((skill, index) => (
-                    <span key={index} className="skill-tag">{skill}</span>
-                  ))}
+                <div className="certificate-actions">
+                  <button 
+                    className="btn-icon"
+                    onClick={() => handleEdit(certificate)}
+                    title={t('common.edit')}
+                  >
+                    <FiEdit />
+                  </button>
+                  <button 
+                    className="btn-icon delete"
+                    onClick={() => handleDelete(certificate.id)}
+                    title={t('common.delete')}
+                  >
+                    <FiTrash />
+                  </button>
                 </div>
-              </div>
-              <div className="certificate-actions">
-                <button 
-                  className="btn-icon"
-                  onClick={() => handleEdit(certificate)}
-                >
-                  <FiEdit />
-                </button>
-                <button 
-                  className="btn-icon delete"
-                  onClick={() => handleDelete(certificate.id)}
-                >
-                  <FiTrash />
-                </button>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

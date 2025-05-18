@@ -40,6 +40,18 @@ const Home = () => {
   // Featured projects (top 3)
   const featuredProjects = projects.slice(0, 3);
 
+  // List of skill categories to display
+  const skillCategoriesToDisplay = [
+    'languages',
+    'frontend',
+    'backend',
+    'databases',
+    'dataScience',
+    'dataAnalysis',
+    'tools',
+    'vfx'
+  ];
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -174,22 +186,24 @@ const Home = () => {
           </motion.div>
 
           <div className="skills-categories">
-            {Object.entries(skills).map(([category, categorySkills]) => (
-              <motion.div 
-                key={category}
-                className="skill-category"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <h3>{t(`skills.categories.${category}`)}</h3>
-                <div className="skills-grid">
-                  {categorySkills.map((skill) => (
-                    <SkillCard key={skill.name} skill={skill} />
-                  ))}
-                </div>
-              </motion.div>
+            {skillCategoriesToDisplay.map(category => (
+              skills[category] && skills[category].length > 0 && (
+                <motion.div 
+                  key={category}
+                  className="skill-category"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h3>{t(`skills.categories.${category}`)}</h3>
+                  <div className="skills-grid">
+                    {skills[category].map((skill) => (
+                      <SkillCard key={`${category}-${skill.name}`} skill={skill} />
+                    ))}
+                  </div>
+                </motion.div>
+              )
             ))}
           </div>
         </div>

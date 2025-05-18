@@ -4,6 +4,7 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
+    "certificates": "Certificates",
     "admin": "Admin"
   },
   "hero": {
@@ -35,7 +36,9 @@
       "backend": "Backend Development",
       "databases": "Databases",
       "tools": "Tools & DevOps",
-      "vfx": "VFX & Pipeline"
+      "vfx": "VFX & Pipeline",
+      "dataScience":"Data Science",
+      "dataAnalysis": "Data Analysis"
     }
   },
   "projects": {
@@ -88,7 +91,23 @@
     "skills": "Skills",
     "issueDate": "Issue Date",
     "organization": "Organization",
-    "credentialId": "Credential ID"
+    "credentialId": "Credential ID",
+    "backTo": "Back to Certificates",
+    "download": "Download Certificate",
+    "notFound": "Certificate not found",
+    "unsupportedFormat": "Unsupported file format or certificate not available",
+    "checkAdmin": "Please check the admin panel to update the certificate image.",
+    "certificate": "Certificate",
+    "certificates": "Certificates",
+    "addNew": "Add New Certificate",
+    "edit": "Edit Certificate",
+    "certificateTitle": "Certificate Title",
+    "certificateImage": "Certificate Image/PDF",
+    "uploadCertificate": "Upload Certificate",
+    "addCertificate": "Add Certificate",
+    "updateCertificate": "Update Certificate",
+    "noCertificates": "No certificates found",
+    "confirmDelete": "Are you sure you want to delete this certificate?"
   },
   "contact": {
     "title": "Get In Touch",
@@ -174,6 +193,10 @@
     "previous": "Previous",
     "yes": "Yes",
     "no": "No",
-    "confirmDelete": "Are you sure you want to delete this?"
+    "confirmDelete": "Are you sure you want to delete this?",
+    "optional": "Optional",
+    "commaSeparated": "Comma-separated",
+    "current": "Current",
+    "fileSize": "File size must be less than 5MB"
   }
 }

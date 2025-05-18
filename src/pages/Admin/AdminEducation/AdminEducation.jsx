@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlus, FiEdit, FiTrash, FiSave } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import { educationData as defaultEducationData } from '../../../data/educationData';
 import './AdminEducation.css';
 
 const AdminEducation = () => {
   const { t } = useTranslation();
-  const [educations, setEducations] = useState([]);
+  const [educations, setEducations] = useState(defaultEducationData);
   const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({
     degree: '',
@@ -16,13 +17,14 @@ const AdminEducation = () => {
     description: ''
   });
 
-  // Load education from localStorage or API
   useEffect(() => {
-    const savedEducation = localStorage.getItem('education');
-    if (savedEducation) {
-      setEducations(JSON.parse(savedEducation));
-    }
-  }, []);
+  const savedEducation = localStorage.getItem('education');
+  if (savedEducation) {
+    setEducations(JSON.parse(savedEducation));
+  } else {
+    localStorage.setItem('education', JSON.stringify(defaultEducationData));
+  }
+}, []);
 
   // Save education to localStorage
   const saveEducation = (updatedEducation) => {

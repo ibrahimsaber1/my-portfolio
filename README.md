@@ -3,8 +3,7 @@
 A modern, multilingual portfolio website built with React, featuring an admin panel, dark mode, and comprehensive project showcase.
 
 ## 🚀 Live Demo
-still under development :)
-[View Live Portfolio]()
+[View Live Portfolio](https://peaceful-kheer-5ba855.netlify.app/)
 
 ## 📋 Table of Contents
 
@@ -233,27 +232,12 @@ npm install -g vercel
 vercel --prod
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 👤 Author
 
 **Ibrahim Saber**
 - Email: ibrahimsaber622@gmail.com
 - LinkedIn: [ibrahim1saber](https://www.linkedin.com/in/ibrahim1saber/)
 - GitHub: [ibrahimsaber1](https://github.com/ibrahimsaber1)
-
-## 🙏 Acknowledgments
-
-- [Create React App](https://github.com/facebook/create-react-app)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React i18next](https://react.i18next.com/)
 
 ---
 
