@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { 
   FiMail, FiPhone, FiMapPin, FiGithub, 
   FiLinkedin, FiSend, FiCheckCircle, FiAlertCircle 
 } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,11 +34,20 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // EmailJS configuration
+      const serviceId = 'service_2u8o56d';
+      const templateId = 'template_1h6pctt';
+      const publicKey = 'D8iYVC7zQeTi1dUN7';
       
-      // In a real app, you would send the email here
-      console.log('Form submitted:', formData);
+      // Send the email using EmailJS
+      const result = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        form.current,
+        publicKey
+      );
+      
+      console.log('Email sent successfully:', result.text);
       
       setStatus({
         type: 'success',
@@ -51,6 +62,7 @@ const Contact = () => {
         message: ''
       });
     } catch (error) {
+      console.error('Error sending email:', error);
       setStatus({
         type: 'error',
         message: t('contact.form.error')
@@ -121,7 +133,7 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <form onSubmit={handleSubmit} className="contact-form">
+            <form ref={form} onSubmit={handleSubmit} className="contact-form">
               {status.message && (
                 <motion.div 
                   className={`status-message ${status.type}`}
